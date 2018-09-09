@@ -1,9 +1,9 @@
 # apache-canvas
 
-using lando apache simple server
+## using lando apache simple server
 .lando.yml
 
-# Name of my app
+#Name of my app
 name: apache-canvas
 proxy:
   html:
@@ -14,7 +14,7 @@ services:
     ssl: true
     webroot: www
     
-#gulp sass compiler
+## gulp sass compiler
 npm install
 
 from scratch
