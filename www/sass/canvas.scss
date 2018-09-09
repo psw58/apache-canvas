@@ -1,0 +1,75 @@
+#main-article > section > div.primary > h2 > em{
+    color: #b31b1b;
+} 
+#site-header > div > div.container-fluid > div{
+    margin-bottom: 20px;
+}
+
+.flex{
+    display: flex;
+
+}
+
+#notification > div{
+    margin-bottom: 10px;
+}
+
+.showcase h3{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.4;
+}
+
+div.card  div.node{
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 3em;
+}
+
+div.spotlight  div.card {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 3px solid #b31b1b;
+}
+
+#main-article > section > div.primary{
+    background: #cce0e6;
+    text-align: center;
+    padding: 30px;
+    /*padding-left: 50px;*/
+    background-size: contain;                  
+    /*background-image: url('./images/cti/canvas transparentlogo3.png');*/
+    background-repeat:   no-repeat;
+    background-position: -200px;       
+    margin-bottom: 1.5em;       
+}
+
+a.link-button{
+    font-size: 24px;
+    padding: 0.5em 1em;
+    min-width: 191px;
+} 
+a.link-button:active, a.link-button:hover, a.link-button:focus{
+    background: #315163;
+    color:#fff;
+}	
+
+.quote p {
+    text-indent: 0em;
+}
+
+@media (min-width: 768px){
+    #main-article > section:nth-child > div.primary{
+        /*width: 50%;*/
+    }
+    #site-header > div > div.band > div > div > div.secondary{
+        /*width: 50%;*/
+    }       
+} 
+
+#notification i  {
+    padding-right: 5px;
+    font-size: 1.2em;
+}
