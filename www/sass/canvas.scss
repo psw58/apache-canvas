@@ -60,13 +60,10 @@ a.link-button:active, a.link-button:hover, a.link-button:focus{
     text-indent: 0em;
 }
 
-@media (min-width: 768px){
-    #main-article > section:nth-child > div.primary{
-        /*width: 50%;*/
-    }
-    #site-header > div > div.band > div > div > div.secondary{
-        /*width: 50%;*/
-    }       
+@media (max-width: 768px){
+    .mobile-hidden{
+        display:none;
+    }   
 } 
 
 #notification i  {
