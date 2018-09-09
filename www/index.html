@@ -7,14 +7,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Canvas at Cornell</title>
     <link rel="shortcut icon" href="/images/cornell/favicon.ico" type="image/vnd.microsoft.icon">
-
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,700i|Lato:300,400" rel="stylesheet">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
         crossorigin="anonymous">
+    <!-- fonts needs clean up and reduction in size-->
     <link href="fonts/font-awesome.min.css" rel="stylesheet">
     <link href="fonts/material-design-iconic-font.min.css" rel="stylesheet">
     <link href="fonts/cornell-custom.css" rel="stylesheet">
-
+    <!-- css needs clean up and reduction in size-->
     <link href="css/base.css" rel="stylesheet">
     <link href="css/cornell.css" rel="stylesheet">
     <link href="css/cwd_slider.css" rel="stylesheet">
@@ -37,7 +37,6 @@
                 <label for="cu-search-query" class="sr-only">Search:</label>
                 <input type="text" id="cu-search-query" name="s" value="" size="30">
                 <button name="btnG" id="cu-search-submit" type="submit" value="go"><span class="sr-only">Submit Search</span></button>
-
                 <div class="search-filters">
                     <h2 class="sr-only">Search Filters:</h2>
                     <input type="radio" id="cu-search-filter1" name="sitesearch" value="thissite" checked="checked">
@@ -67,7 +66,6 @@
                     </nav>
                 </div>
             </div>
-
             <div class="flex">
                 <div id='notification' class="container-fluid">
                 </div>
@@ -219,17 +217,16 @@
             </div>
         </div>
     </footer>
-
     <!-- jQuery and Contrib Components -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="js/contrib/modernizr.js"></script>
 
-    <!-- CWD Components -->
+    <!-- CWD Components need for show hide search and side links-->
     <script src="js/cwd.js"></script>
     <script src="js/cwd_utilities.js"></script>
-    <script src="js/cwd_slider.js"></script>
+    <!--script src="js/cwd_slider.js"></script -->
 
-    <!--dynamicly load and render spotlights & notification requires jQuery-->
+    <!--dynamicly load and render spotlights(announcements) & notification requires jQuery-->
     <script src="js/services/service.js"></script>
     <script src="js/views/spotlight.js"></script>
     <script src="js/views/notification.js"></script>
