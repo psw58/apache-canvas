@@ -4,16 +4,16 @@
 .lando.yml
 
 #Name of my app
-name: apache-canvas
-proxy:
-  html:
-    - apache.lndo.site
-services:
-  html:
-    type: apache:2.2
-    ssl: true
-    webroot: www
-    
+  name: apache-canvas
+  proxy:
+    html:
+      - apache.lndo.site
+  services:
+    html:
+      type: apache:2.2
+      ssl: true
+      webroot: www
+
 ## gulp sass compiler
 npm install
 
