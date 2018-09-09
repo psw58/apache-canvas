@@ -2,8 +2,6 @@
 
 ## using lando apache simple server
 .lando.yml
-
-#Name of my app
  
   name: apache-canvas
    
