@@ -12,28 +12,27 @@ var SpotlightView = function (data, content){
 
     this.listTemplate = function( myData ){
         var hinner = '';
-        if (myData.length > MAXLENGTH){
-            var truncData = myData.splice(0,MAXLENGTH)
-        }else{
-            truncData = myData;
-        }
-        
-        $.each(truncData, function(i, el){
-            hinner += '<div class="card"> \
-            <div role="article" class="node"> <a href="'+el.url+'" rel="bookmark"> \
-                    <div class="group-image field-group"> \
-                        <div class="field field-name-field-image"> <img src="'+el.img.src+'" \
-                                width="720" height="480" alt="'+el.img.alt+'" /> \
+        if (myData.length > MAXLENGTH) { myData = myData.splice(0,MAXLENGTH) };
+        $.each(myData, function(i, el){
+            if (el.img && el.img.src && el.img.alt){
+                hinner += '<div class="card"> \
+                <div role="article" class="node"> <a href="'+el.url+'" rel="bookmark"> \
+                        <div class="group-image field-group"> \
+                            <div class="field field-name-field-image"> <img src="'+el.img.src+'" \
+                                    width="720" height="480" alt="'+el.img.alt+'" /> \
+                            </div> \
                         </div> \
-                    </div> \
-                    <div class="group-fields field-group"> \
-                        <div class="field field-name-category category"> News </div> \
-                        <div class="field field-name-title title"> \
-                            <h3 class="sans">'+el.title+'</h3> \
+                        <div class="group-fields field-group"> \
+                            <div class="field field-name-category category"> News </div> \
+                            <div class="field field-name-title title"> \
+                                <h3 class="sans">'+el.title+'</h3> \
+                            </div> \
                         </div> \
-                    </div> \
-                </a> </div> \
-        </div>';
+                    </a> </div> \
+            </div>';
+            }else{
+                condole.log("invalid JSON data @TODO do fallback");
+            }
         })
         return hinner;
     }
