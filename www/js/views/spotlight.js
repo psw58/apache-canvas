@@ -2,7 +2,7 @@
 var SpotlightView = function (data, content){
     //the maximun nuber of spotlights
     var MAXLENGTH = 2
-    
+
     this.init = function(){
         this.$el = $('<div/>');
     }
@@ -32,7 +32,7 @@ var SpotlightView = function (data, content){
                     </a> </div> \
             </div>';
             }else{
-                condole.log("invalid JSON data @TODO do fallback");
+                condole.warn("invalid JSON data @TODO do fallback");
             }
         })
         return hinner;
