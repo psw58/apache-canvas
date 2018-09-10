@@ -2,6 +2,7 @@
 var SpotlightView = function (data, content){
     //the maximun nuber of spotlights
     var MAXLENGTH = 2
+    
     this.init = function(){
         this.$el = $('<div/>');
     }
@@ -14,7 +15,7 @@ var SpotlightView = function (data, content){
         var hinner = '';
         if (myData.length > MAXLENGTH) { myData = myData.splice(0,MAXLENGTH) };
         $.each(myData, function(i, el){
-            if (el.img && el.img.src && el.img.alt){
+            if (el.url && el.title && el.img && el.img.src && el.img.alt){
                 hinner += '<div class="card"> \
                 <div role="article" class="node"> <a href="'+el.url+'" rel="bookmark"> \
                         <div class="group-image field-group"> \
