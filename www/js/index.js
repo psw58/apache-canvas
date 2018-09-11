@@ -8,7 +8,7 @@
     var spotlightTarget = '#spotlight';
     var notificationTarget = '#notification';
     var spotlightDataURL =  "./imports/spotlightdata.json";
-    var rssSpotlight = "https://test-ctiteach.pantheonsite.io/showcase/rss.xml";
+    var rssSpotlight = "https://psw-ctiteach.pantheonsite.io/showcase/rss.xml";
     var jsonSpotlight = 'https://psw-ctiteach.pantheonsite.io/spotlight/feed.json';
     var spotlightContent = {
         "title": "Announcements"
@@ -21,7 +21,7 @@
     var jsonService = new JsonService(jsonSpotlight);
     
     //CTI must enable view display feed at /showcase/rss.xml
-    jsonService.init()
+    rssService.init()
         .done(
             function(data){
                 if (data){

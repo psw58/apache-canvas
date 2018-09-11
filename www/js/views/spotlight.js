@@ -16,13 +16,13 @@ var SpotlightView = function (data, content){
         if (myData.length > MAXLENGTH) { myData = myData.splice(0,MAXLENGTH) };
         $.each(myData, function(i, el){
             var $el = $('<div/>').html(el.description);
-            var alt = $($el).find('img').attr('alt');
+            el.alt = $($el).find('img').attr('alt');
             if (true){
                 hinner += '<div class="card"> \
                 <div role="article" class="node"> <a href="'+el.link+'" rel="bookmark"> \
                         <div class="group-image field-group"> \
                             <div class="field field-name-field-image"> <img src="'+el.thumbnail                            +'" \
-                                    width="720" height="480" alt="'+alt+'" /> \
+                                    width="720" height="480" alt="'+el.alt+'" /> \
                             </div> \
                         </div> \
                         <div class="group-fields field-group"> \
