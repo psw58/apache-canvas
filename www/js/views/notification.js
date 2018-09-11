@@ -32,7 +32,7 @@
             <p><i class="fas fa-exclamation-triangle exclamation-triangle"></i>'+data.message+'</p> \
         </div> ';            
         }else{
-            consol.warn('error in notification data');
+            console.warn('error in notification data');
         }
         return myHTML
     }

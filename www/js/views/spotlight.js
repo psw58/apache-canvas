@@ -13,7 +13,7 @@ var SpotlightView = function (data, content){
 
     this.listTemplate = function( myData ){
         var hinner = '';
-        if (myData.length > MAXLENGTH) { myData = myData.splice(0,MAXLENGTH) };
+        if (myData && (myData.length > MAXLENGTH)) { myData = myData.splice(0,MAXLENGTH) };
         $.each(myData, function(i, el){
             var $el = $('<div/>').html(el.description);
             el.alt = $($el).find('img').attr('alt');

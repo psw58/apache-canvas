@@ -6,12 +6,15 @@ var RssSpotlightService = function( url ){
     function parseRSS($xml){
         var items = $($xml).find('item');
         var myArr = []
+        //iterate through the rss items
         $(items).each(function () {
-            myobj = {};
+            // create a data obj to hold the message
+            var myobj = {};
             var $el = $(this);
             myobj.link = $el.find('link').text();
             myobj.title = $el.find('title').text();
             var desc = $el.find('description').text();
+
             //search the description for the image
             var $desc = $('<div/>').html(desc);
             myobj.thumbnail = $desc.find('img').attr('src');
@@ -36,7 +39,11 @@ var RssSpotlightService = function( url ){
               var $xml = $($.parseXML(xml));
               data = parseRSS( $xml );
               deferred.resolve(data);
-            }
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                console.log("Status: " + textStatus); alert("Error: " + errorThrown); 
+                deferred.fail();
+            }   
         });  
         return deferred.promise( data );
     }
@@ -74,18 +81,21 @@ var RssNotificationService = function( url ){
         $.ajax({
             type: 'GET',
             url: url,
-            success: function(doc) {
-              console.log(doc);    
+            success: function(doc) {  
               var xml = $(doc).find('rss').html();
               var $xml = $($.parseXML(xml));
               data = parseRSS( $xml );
               deferred.resolve(data);
-            }
+            },
+            error: function(XMLHttpRequest, textStatus, errorThrown) { 
+                console.log("Status: " + textStatus); alert("Error: " + errorThrown); 
+                deferred.fail();
+            }   
         });  
         return deferred.promise( data );
     }
 }
-
+/*
 var Service = function( url ){
     var data;
     this.init = function(){
@@ -125,6 +135,7 @@ var RssJsonService = function( url ){
         return deferred.promise( data );
     }
 }
+*/
 
 /* unused dont render until both data are recieved
 var Service = function( url ){
