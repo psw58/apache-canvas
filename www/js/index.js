@@ -9,32 +9,38 @@
     var notificationTarget = '#notification';
     var spotlightDataURL =  "./imports/spotlightdata.json";
     var rssSpotlight = "https://psw-ctiteach.pantheonsite.io/showcase/rss.xml";
-    var jsonSpotlight = 'https://psw-ctiteach.pantheonsite.io/spotlight/feed.json';
+    var rssNotification = 'https://psw-ctiteach.pantheonsite.io/notification/rss.xml';
+
+    //var rssSpotlightBU = "./imports/spotlightdata.xml";
+    //var jsonSpotlight = 'https://psw-ctiteach.pantheonsite.io/spotlight/feed.json';    
+
+    //should this come from CMS?
     var spotlightContent = {
         "title": "Announcements"
     }
-    var notificationdatURL = "./imports/notificationdata.json";
-    var rssService = new RssService( rssSpotlight );
-    var spotlightService = new Service(spotlightDataURL);
-    var notificationService = new Service(notificationdatURL);
 
-    var jsonService = new JsonService(jsonSpotlight);
+    //var notificationdatURL = "./imports/notificationdata.json";
+    
+    var rssSpotlightService = new RssSpotlightService( rssSpotlight );
+    var rssNotificationService = new RssNotificationService( rssNotification );
+    //var notificationService = new Service( notificationdatURL );
+    var spotlightService = new Service(spotlightDataURL);
     
     //CTI must enable view display feed at /showcase/rss.xml
-    rssService.init()
+    rssSpotlightService.init()
         .done(
             function(data){
                 if (data){
-                    console.log(data)
-                    //var view = new SpotlightView(data, spotlightContent);
-                    //$(spotlightTarget).html( view.render().$el );       
+                    console.log(data);
+                    var view = new SpotlightView(data, spotlightContent);
+                    $(spotlightTarget).html( view.render().$el );       
                 }
             }
         )
         .fail( 
             function(){
                 //used saved data
-                console.log("failed to load data");
+                console.log("failed to load data using backup");
                 spotlightService.init()
                 .done(
                     function(data){
@@ -50,7 +56,7 @@
             }
         )    
 
-    notificationService.init()
+    rssNotificationService.init()
         .done(
             function(data){
                 if (data && data.length){

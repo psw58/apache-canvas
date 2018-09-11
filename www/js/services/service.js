@@ -1,32 +1,91 @@
+//using Rssfeed from php cors enabled site
+var RssSpotlightService = function( url ){
+    var data;
 
-/*
-var Service = function( url ){
-    var that = this;
-    var data = {};
-    var notification;
-    var spotlight;
+    //parse the xml and return js obj
+    function parseRSS($xml){
+        var items = $($xml).find('item');
+        var myArr = []
+        $(items).each(function () {
+            myobj = {};
+            var $el = $(this);
+            myobj.link = $el.find('link').text();
+            myobj.title = $el.find('title').text();
+            var desc = $el.find('description').text();
+            //search the description for the image
+            var $desc = $('<div/>').html(desc);
+            myobj.thumbnail = $desc.find('img').attr('src');
+            myobj.alt = $desc.find('img').attr('alt');
+            if(myobj && myobj.link && myobj.title && myobj.thumbnail){
+                myArr.push(myobj);
+            }else{
+                console.warn("ERROR parsing xml content");
+            }
+            
+        });
+        return myArr;
+    } 
 
     this.init = function(){
         var deferred = $.Deferred();
-        $.when(
-            $.getJSON( "./imports/spotlightdata.json", function(spotlightData) {
-                spotlight = spotlightData;
-              }),
-            $.getJSON( "./imports/notificationdata.json", function(notificationData) {
-                notification = notificationData;
-            })              
-        ).then(
-            function( objs ){
-                data.notification = notification;
-                data.spotlight = spotlight; 
-                deferred.resolve(data);
+        $.ajax({
+            type: 'GET',
+            url: url,
+            success: function(doc) {  
+              var xml = $(doc).find('rss').html();
+              var $xml = $($.parseXML(xml));
+              data = parseRSS( $xml );
+              deferred.resolve(data);
             }
-            
-        )
+        });  
         return deferred.promise( data );
     }
 }
-*/
+
+var RssNotificationService = function( url ){
+    var data;
+    //parse the xml and return js obj
+    var myArr = [];
+    function parseRSS($xml){
+        var items = $($xml).find('item');
+        $(items).each(function () {
+            myobj = {};
+            var $el = $(this);
+            var desc = $el.find('description').text();
+            //search the description for the image
+            var $desc = $('<div/>').html(desc);
+            var divs = $desc.find('div');
+            $(divs).each(function(i ,el){
+                var $div = $(this);
+                if ($div.text() == "message"){
+                    myobj.message = $(divs[i+1]).text();
+                }else if( $div.text() == "selected_color_option"){
+                    myobj.selected_color_option = $(divs[i+1]).text();
+                }
+            })
+            myArr.push(myobj);
+        });
+        return myArr;
+    } 
+
+    this.init = function(){
+        var deferred = $.Deferred();
+        var ret = [];
+        $.ajax({
+            type: 'GET',
+            url: url,
+            success: function(doc) {
+              console.log(doc);    
+              var xml = $(doc).find('rss').html();
+              var $xml = $($.parseXML(xml));
+              data = parseRSS( $xml );
+              deferred.resolve(data);
+            }
+        });  
+        return deferred.promise( data );
+    }
+}
+
 var Service = function( url ){
     var data;
     this.init = function(){
@@ -39,57 +98,6 @@ var Service = function( url ){
         return deferred.promise( data );
     }
     
-}
-
-//using https://rss2json.com API to go around CORS
-var RssService = function( url ){
-    var data;
-
-    function parseRSS(el){
-        //console.log(el.context.outerHTML);
-        $(el.context.outerHTML).find('link');
-        var myobj = {};
-        //var $html = $('<div/>').html(el.context.outerHTML);
-        var $html = $($.parseXML(el));
-        console.log($html);
-        myobj.title = $html.find('title').text();
-        //myobj.link =($html).text().replace(/\<link>|\<\/link>/gi,''); 
-        myobj.link =$html.find('link').val()
-        var desc = $html.find('description').text();
-        var $desc = $('<div/>').html(desc);
-        myobj.thumbnail = $desc.find('img').attr('src');
-        myobj.alt = $desc.find('img').attr('alt');
-        
-
-        return myobj;
-
-    } 
-
-    this.init = function(){
-        var deferred = $.Deferred();
-        var ret = [];
-        $.ajax({
-            type: 'GET',
-            url: url,
-            success: function(rss) {
-              console.log(rss);    
-              rss = $(rss).find('rss').html();
-              console.log(rss)
-              var xml = $($.parseXML(rss));
-              console.log(xml.find('channel'));
-              /*
-              $(rss).find("item").each(function () {
-                var el = $(this);
-                var myObj = parseRSS(el)
-                console.log(myObj);
-                ret.push(myObj);
-                
-          });
-          */
-            }
-        });  
-        return deferred.promise( data );
-    }
 }
 
 //using https://rss2json.com API to go around CORS
@@ -118,23 +126,33 @@ var RssJsonService = function( url ){
     }
 }
 
-var JsonService = function( url ){
-    var data;
+/* unused dont render until both data are recieved
+var Service = function( url ){
+    var that = this;
+    var data = {};
+    var notification;
+    var spotlight;
+
     this.init = function(){
         var deferred = $.Deferred();
-        $.ajax({
-            type: 'GET',
-            url: url,
-            dataType: 'json',
-            crossOrigin: true,
-            success: function(rss) {
-              console.log(rss);    
-              //console.log( JSON.stringify(rss.items));
-              //an array of spotlight items
-              data = rss.items
-              deferred.resolve(data);
+        $.when(
+            $.getJSON( "./imports/spotlightdata.json", function(spotlightData) {
+                spotlight = spotlightData;
+              }),
+            $.getJSON( "./imports/notificationdata.json", function(notificationData) {
+                notification = notificationData;
+            })              
+        ).then(
+            function( objs ){
+                data.notification = notification;
+                data.spotlight = spotlight; 
+                deferred.resolve(data);
             }
-        });  
+            
+        )
         return deferred.promise( data );
     }
 }
+*/
+
+

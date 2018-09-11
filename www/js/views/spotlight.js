@@ -26,7 +26,7 @@ var SpotlightView = function (data, content){
                             </div> \
                         </div> \
                         <div class="group-fields field-group"> \
-                            <div class="field field-name-category category"> News </div> \
+                            <div class="field field-name-category category"> </div> \
                             <div class="field field-name-title title"> \
                                 <h3 class="sans">'+el.title+'</h3> \
                             </div> \

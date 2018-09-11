@@ -18,7 +18,7 @@
     //set background color
     var selected_option = 1 //fall back default color
     if ('selected_color_option' in data){
-        selected_option = data.selected_color_option;
+        selected_option = parseInt(data.selected_color_option);
     }
 
     this.init = function(){
