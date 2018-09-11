@@ -1,26 +1,300 @@
-[
-  {
-    "url": "https://it.cornell.edu/canvas",
-    "img": {
-            "src":"https://teaching.cornell.edu/sites/default/files/styles/threecard/public/2018-08/Spotlight%20Image%202%20canvas_0.jpg?itok=tNMHKIi4",
-            "alt":"The logo for the Learning Mangement System Canvas" 
-    },
-    "title":"Cornell to Replace Blackboard with Canvas for All Courses beginning 2019"
-  },
-  {
-    "url": "https://www.youtube.com/watch?feature=youtu.be&amp;v=UJt6AVWT_GI",
-    "img": {
-            "src":"https://teaching.cornell.edu/sites/default/files/styles/threecard/public/2018-08/Spotlight%20Image%201-%20TLDC%20Video.jpg?itok=Dwhxzwx2",
-            "alt":"Student in classroom" 
-    },
-    "title":"Teaching &amp; Learning in the Diverse Classroom (NEW Online Course)"
-  },
-  {
-    "url": "https://it.cornell.edu/canvas",
-    "img": {
-            "src":"https://teaching.cornell.edu/sites/default/files/styles/threecard/public/2018-08/Spotlight%20Image%202%20canvas_0.jpg?itok=tNMHKIi4",
-            "alt":"The logo for the Learning Mangement System Canvas" 
-    },
-    "title":"Cornell to Replace Blackboard with Canvas for All Courses beginning 2019"
-  }
+[ {
+    "nid":[ {
+        "value": 454
+    }
+    ],
+    "uuid":[ {
+        "value": "3c147190-ec26-42e9-b72e-1ed00106f398"
+    }
+    ],
+    "vid":[ {
+        "value": 2170
+    }
+    ],
+    "langcode":[ {
+        "value": "en"
+    }
+    ],
+    "type":[ {
+        "target_id": "spotlight", "target_type": "node_type", "target_uuid": "483fd6ff-77ce-4ea3-8e26-fe3ba1c08144"
+    }
+    ],
+    "revision_timestamp":[ {
+        "value": "2018-09-07T17:38:33+00:00", "format": "Y-m-d\\TH:i:sP"
+    }
+    ],
+    "revision_uid":[ {
+        "target_id": 36, "target_type": "user", "target_uuid": "a6582049-dde1-4552-ad7b-c25c11b4cbfd", "url": "\/user\/36"
+    }
+    ],
+    "revision_log":[],
+    "status":[ {
+        "value": true
+    }
+    ],
+    "title":[ {
+        "value": "Teaching \u0026 Learning in the Diverse Classroom Online Course"
+    }
+    ],
+    "uid":[ {
+        "target_id": 36, "target_type": "user", "target_uuid": "a6582049-dde1-4552-ad7b-c25c11b4cbfd", "url": "\/user\/36"
+    }
+    ],
+    "created":[ {
+        "value": "2018-09-07T17:01:21+00:00", "format": "Y-m-d\\TH:i:sP"
+    }
+    ],
+    "changed":[ {
+        "value": "2018-09-07T17:38:33+00:00", "format": "Y-m-d\\TH:i:sP"
+    }
+    ],
+    "promote":[ {
+        "value": false
+    }
+    ],
+    "sticky":[ {
+        "value": false
+    }
+    ],
+    "default_langcode":[ {
+        "value": true
+    }
+    ],
+    "revision_translation_affected":[ {
+        "value": true
+    }
+    ],
+    "moderation_state":[ {
+        "value": "published"
+    }
+    ],
+    "path":[ {
+        "alias": "\/spotlights\/teaching-learning-diverse-classroom-online-course", "pid": 377, "langcode": "en"
+    }
+    ],
+    "menu_link":[],
+    "body":[ {
+        "value": "\u003Cp\u003E\u003Cspan\u003E\u003Cspan\u003E\u003Cspan\u003EThis fall the CTI will pilot the online course,\u003Cspan\u003E\u0026nbsp;\u003C\/span\u003E\u003Cem\u003ETeaching and Learning in the Diverse Classroom\u003C\/em\u003E. This course is open to any Cornell instructor, with all disciplines and any level of diversity expertise welcome.\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/p\u003E\r\n\r\n\u003Cdrupal-entity data-embed-button=\u0022video_embed\u0022 data-entity-embed-display=\u0022view_mode:media.token\u0022 data-entity-type=\u0022media\u0022 data-entity-uuid=\u00221f13a4e9-aa0d-4dbf-a7f2-e9f077334292\u0022\u003E\u003C\/drupal-entity\u003E\r\n\r\n\u003Cdiv\u003E\r\n\u003Cp\u003E\u003Cspan\u003E\u003Cspan\u003E\u003Cem\u003E\u003Cspan\u003ETeaching and Learning in the Diverse Classroom\u003C\/span\u003E\u003C\/em\u003E\u003Cspan\u003E\u003Cspan\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003Eexplores a framework for inclusive course design, the roles of intersectional social identities\u003Cspan\u003E\u003Cspan\u003E\u003Cspan\u003E\u003Cspan\u003E\u0026nbsp;\u003C\/span\u003Ein the learning environment, pedagogical practices that support student engagement, curriculum design from a diversity perspective, and strategies for individual and institutional change.\u003Cspan\u003E\u0026nbsp;\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/p\u003E\r\n\r\n\u003Cp\u003E\u003Cspan\u003E\u003Cspan\u003E\u003Cspan\u003EThe course includes videos, activities, readings, and opportunities for some discussion with peers within the Cornell community. In addition to inclusive course design and teaching strategies, participants will be invited to reflect on their own formative experiences as learners, teachers, and members of disciplines. The content addresses:\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/p\u003E\r\n\r\n\u003Cul\u003E\r\n\t\u003Cli\u003E\u003Cspan\u003E\u003Cspan\u003E\u003Cspan\u003EA framework for inclusive course design.\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/li\u003E\r\n\t\u003Cli\u003E\u003Cspan\u003E\u003Cspan\u003E\u003Cspan\u003EStrategies and exercises helpful in facilitating discussion and modeling inclusivity when unexpected issues arise.\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/li\u003E\r\n\t\u003Cli\u003E\u003Cspan\u003E\u003Cspan\u003E\u003Cspan\u003EOpportunities to reflect on the implications of social identities \u2014 both students\u2019 and instructors\u2019\u2014 within the teaching and learning environment\u003Cspan\u003E.\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/li\u003E\r\n\t\u003Cli\u003E\u003Cspan\u003E\u003Cspan\u003E\u003Cspan\u003EA showcase of evidence-based learning strategies\u003Cspan\u003E.\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/li\u003E\r\n\t\u003Cli\u003E\u003Cspan\u003E\u003Cspan\u003E\u003Cspan\u003EA framework for evaluating a course syllabus from a diversity perspective.\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/li\u003E\r\n\u003C\/ul\u003E\r\n\u003C\/div\u003E\r\n", "format": "filtered_html", "processed": "\u003Cp\u003E\u003Cspan\u003E\u003Cspan\u003E\u003Cspan\u003EThis fall the CTI will pilot the online course,\u003Cspan\u003E\u00a0\u003C\/span\u003E\u003Cem\u003ETeaching and Learning in the Diverse Classroom\u003C\/em\u003E. This course is open to any Cornell instructor, with all disciplines and any level of diversity expertise welcome.\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/p\u003E\n\n\n\n\u003C!-- THEME DEBUG --\u003E\n\u003C!-- THEME HOOK: \u0027entity_embed_container\u0027 --\u003E\n\u003C!-- BEGIN OUTPUT from \u0027modules\/contrib\/entity_embed\/templates\/entity-embed-container.html.twig\u0027 --\u003E\n\u003Carticle class=\u0022embedded-entity\u0022\u003E\u003C!-- THEME DEBUG --\u003E\u003C!-- THEME HOOK: \u0027media\u0027 --\u003E\u003C!-- FILE NAME SUGGESTIONS:\n   * media--video--token.html.twig\n   * media--video.html.twig\n   * media--token.html.twig\n   x media.html.twig\n--\u003E\u003C!-- BEGIN OUTPUT from \u0027core\/themes\/stable\/templates\/content\/media.html.twig\u0027 --\u003E\u003Carticle data-quickedit-entity-id=\u0022media\/83\u0022 class=\u0022contextual-region\u0022\u003E\u003Cdiv data-contextual-id=\u0022media:media=83:changed=1536339994\u0026amp;langcode=en\u0022\u003E\u003C\/div\u003E\n      \n\n\u003C!-- THEME DEBUG --\u003E\n\u003C!-- THEME HOOK: \u0027field\u0027 --\u003E\n\u003C!-- FILE NAME SUGGESTIONS:\n   * field--media--field-media-video-embed-field--video.html.twig\n   * field--media--field-media-video-embed-field.html.twig\n   * field--media--video.html.twig\n   * field--field-media-video-embed-field.html.twig\n   * field--video-embed-field.html.twig\n   x field.html.twig\n--\u003E\n\u003C!-- BEGIN OUTPUT from \u0027core\/themes\/stable\/templates\/field\/field.html.twig\u0027 --\u003E\n\n            \u003Cdiv data-quickedit-field-id=\u0022media\/83\/field_media_video_embed_field\/en\/token\u0022\u003E\n\n\u003C!-- THEME DEBUG --\u003E\n\u003C!-- THEME HOOK: \u0027container\u0027 --\u003E\n\u003C!-- BEGIN OUTPUT from \u0027core\/themes\/stable\/templates\/form\/container.html.twig\u0027 --\u003E\n\u003Cdiv class=\u0022video-embed-field-provider-youtube video-embed-field-responsive-video\u0022\u003E\n\n\u003C!-- THEME DEBUG --\u003E\n\u003C!-- THEME HOOK: \u0027video_embed_iframe__youtube\u0027 --\u003E\n\u003C!-- FILE NAME SUGGESTIONS:\n   * video-embed-iframe--youtube.html.twig\n   x video-embed-iframe.html.twig\n--\u003E\n\u003C!-- BEGIN OUTPUT from \u0027modules\/contrib\/video_embed_field\/templates\/video-embed-iframe.html.twig\u0027 --\u003E\n\u003Ciframe width=\u0022854\u0022 height=\u0022480\u0022 frameborder=\u00220\u0022 allowfullscreen=\u0022allowfullscreen\u0022 src=\u0022https:\/\/www.youtube.com\/embed\/UJt6AVWT_GI?autoplay=0\u0026amp;start=0\u0026amp;rel=0\u0022\u003E\u003C\/iframe\u003E\n\n\u003C!-- END OUTPUT from \u0027modules\/contrib\/video_embed_field\/templates\/video-embed-iframe.html.twig\u0027 --\u003E\n\n\u003C\/div\u003E\n\n\u003C!-- END OUTPUT from \u0027core\/themes\/stable\/templates\/form\/container.html.twig\u0027 --\u003E\n\n\u003C\/div\u003E\n      \n\u003C!-- END OUTPUT from \u0027core\/themes\/stable\/templates\/field\/field.html.twig\u0027 --\u003E\n\n\n  \u003C\/article\u003E\u003C!-- END OUTPUT from \u0027core\/themes\/stable\/templates\/content\/media.html.twig\u0027 --\u003E\u003C\/article\u003E\u003C!-- END OUTPUT from \u0027modules\/contrib\/entity_embed\/templates\/entity-embed-container.html.twig\u0027 --\u003E\u003Cdiv\u003E\n\u003Cp\u003E\u003Cspan\u003E\u003Cspan\u003E\u003Cem\u003E\u003Cspan\u003ETeaching and Learning in the Diverse Classroom\u003C\/span\u003E\u003C\/em\u003E\u003Cspan\u003E\u003Cspan\u003E\u00a0\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003Eexplores a framework for inclusive course design, the roles of intersectional social identities\u003Cspan\u003E\u003Cspan\u003E\u003Cspan\u003E\u003Cspan\u003E\u00a0\u003C\/span\u003Ein the learning environment, pedagogical practices that support student engagement, curriculum design from a diversity perspective, and strategies for individual and institutional change.\u003Cspan\u003E\u00a0\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/p\u003E\n\n\u003Cp\u003E\u003Cspan\u003E\u003Cspan\u003E\u003Cspan\u003EThe course includes videos, activities, readings, and opportunities for some discussion with peers within the Cornell community. In addition to inclusive course design and teaching strategies, participants will be invited to reflect on their own formative experiences as learners, teachers, and members of disciplines. The content addresses:\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/p\u003E\n\n\u003Cul\u003E\u003Cli\u003E\u003Cspan\u003E\u003Cspan\u003E\u003Cspan\u003EA framework for inclusive course design.\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/li\u003E\n\t\u003Cli\u003E\u003Cspan\u003E\u003Cspan\u003E\u003Cspan\u003EStrategies and exercises helpful in facilitating discussion and modeling inclusivity when unexpected issues arise.\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/li\u003E\n\t\u003Cli\u003E\u003Cspan\u003E\u003Cspan\u003E\u003Cspan\u003EOpportunities to reflect on the implications of social identities \u2014 both students\u2019 and instructors\u2019\u2014 within the teaching and learning environment\u003Cspan\u003E.\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/li\u003E\n\t\u003Cli\u003E\u003Cspan\u003E\u003Cspan\u003E\u003Cspan\u003EA showcase of evidence-based learning strategies\u003Cspan\u003E.\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/li\u003E\n\t\u003Cli\u003E\u003Cspan\u003E\u003Cspan\u003E\u003Cspan\u003EA framework for evaluating a course syllabus from a diversity perspective.\u003C\/span\u003E\u003C\/span\u003E\u003C\/span\u003E\u003C\/li\u003E\n\u003C\/ul\u003E\u003C\/div\u003E", "summary": ""
+    }
+    ],
+    "field_link_single":[],
+    "field_media_image":[ {
+        "target_id": 55, "target_type": "media", "target_uuid": "7c9c2cae-3bf3-4225-ac78-847cf16ac1eb", "url": "\/media\/55"
+    }
+    ],
+    "field_media_video":[ {
+        "target_id": 83, "target_type": "media", "target_uuid": "1f13a4e9-aa0d-4dbf-a7f2-e9f077334292", "url": "\/media\/83"
+    }
+    ],
+    "field_plain_type":[ {
+        "value": "Initiative"
+    }
+    ],
+    "field_service_term":[],
+    "field_tags":[ {
+        "target_id": 7, "target_type": "taxonomy_term", "target_uuid": "fdc517c9-04a2-4fe2-9405-67c6fa437d48", "url": "\/taxonomy\/term\/7"
+    }
+    ],
+    "field_teaser":[]
+}
+
+,
+{
+    "nid":[ {
+        "value": 453
+    }
+    ],
+    "uuid":[ {
+        "value": "f129715d-ab2d-4923-80c6-200d4f928683"
+    }
+    ],
+    "vid":[ {
+        "value": 2173
+    }
+    ],
+    "langcode":[ {
+        "value": "en"
+    }
+    ],
+    "type":[ {
+        "target_id": "spotlight", "target_type": "node_type", "target_uuid": "483fd6ff-77ce-4ea3-8e26-fe3ba1c08144"
+    }
+    ],
+    "revision_timestamp":[ {
+        "value": "2018-09-07T17:41:01+00:00", "format": "Y-m-d\\TH:i:sP"
+    }
+    ],
+    "revision_uid":[ {
+        "target_id": 36, "target_type": "user", "target_uuid": "a6582049-dde1-4552-ad7b-c25c11b4cbfd", "url": "\/user\/36"
+    }
+    ],
+    "revision_log":[],
+    "status":[ {
+        "value": true
+    }
+    ],
+    "title":[ {
+        "value": "2018 Innovative Teaching \u0026 Learning Awards"
+    }
+    ],
+    "uid":[ {
+        "target_id": 36, "target_type": "user", "target_uuid": "a6582049-dde1-4552-ad7b-c25c11b4cbfd", "url": "\/user\/36"
+    }
+    ],
+    "created":[ {
+        "value": "2018-09-06T19:26:49+00:00", "format": "Y-m-d\\TH:i:sP"
+    }
+    ],
+    "changed":[ {
+        "value": "2018-09-07T17:41:01+00:00", "format": "Y-m-d\\TH:i:sP"
+    }
+    ],
+    "promote":[ {
+        "value": false
+    }
+    ],
+    "sticky":[ {
+        "value": false
+    }
+    ],
+    "default_langcode":[ {
+        "value": true
+    }
+    ],
+    "revision_translation_affected":[ {
+        "value": true
+    }
+    ],
+    "moderation_state":[ {
+        "value": "published"
+    }
+    ],
+    "path":[ {
+        "alias": "\/spotlights\/2018-innovative-teaching-learning-awards", "pid": 376, "langcode": "en"
+    }
+    ],
+    "menu_link":[],
+    "body":[ {
+        "value": "\u003Cp\u003EThe Center for Teaching Innovation (CTI) invited the Cornell teaching community to propose projects that explore new tools and emerging technologies, approaches, and teaching strategies to facilitate vibrant, challenging, and reflective learning experiences at Cornell.\u0026nbsp;The 2018 awardees include:\u003C\/p\u003E\r\n\r\n\u003Cul\u003E\r\n\t\u003Cli\u003EPsychology \u2013\u0026nbsp;\u003Cstrong\u003E\u003Cem\u003EKatherine Kinzler, Associate Professor\u003C\/em\u003E\u003C\/strong\u003E\r\n\r\n\t\u003Cul\u003E\r\n\t\t\u003Cli\u003EProject: to reimagine a current class by using a research-based approach to understand and combat gendered participation in their class.\u003C\/li\u003E\r\n\t\u003C\/ul\u003E\r\n\t\u003C\/li\u003E\r\n\t\u003Cli\u003EEcology \u0026amp; Evolutionary Biology \u2013\u0026nbsp;\u003Cem\u003E\u003Cstrong\u003EKelly Zamudio, Professor\/Abby Drake, Senior Lecturer\u003C\/strong\u003E\u003C\/em\u003E\r\n\t\u003Cul\u003E\r\n\t\t\u003Cli\u003EProject: to create an online evolutionary biology course that utilizes active learning techniques.\u003C\/li\u003E\r\n\t\u003C\/ul\u003E\r\n\t\u003C\/li\u003E\r\n\t\u003Cli\u003ENeurobiology \u0026amp; Behavior -\u0026nbsp;\u003Cem\u003E\u003Cstrong\u003EMark Sarvary, Senior Lecturer\u003C\/strong\u003E\u003C\/em\u003E\r\n\t\u003Cul\u003E\r\n\t\t\u003Cli\u003EProject: to develop a new learning space \u0022bio-imagination makerspace\u0022 with the investigative biology teaching laboratories.\u003C\/li\u003E\r\n\t\u003C\/ul\u003E\r\n\t\u003C\/li\u003E\r\n\t\u003Cli\u003EClassics \u2013\u0026nbsp;\u003Cem\u003E\u003Cstrong\u003ECourtney Roby, Associate Professor\/Andrew Hicks, Associate Professor\u003C\/strong\u003E\u003C\/em\u003E\r\n\t\u003Cul\u003E\r\n\t\t\u003Cli\u003EProject: to create new tools to assist in making their team-taught course \u0022The Art of Math\u0022 more active and engaging for their diverse group of students.\u003C\/li\u003E\r\n\t\u003C\/ul\u003E\r\n\t\u003C\/li\u003E\r\n\t\u003Cli\u003ECommunication \u2013\u0026nbsp;\u003Cem\u003E\u003Cstrong\u003EAndrea Won, Assistant Professor\/Connie Yuan, Professor\u003C\/strong\u003E\u003C\/em\u003E\r\n\t\u003Cul\u003E\r\n\t\t\u003Cli\u003EProject: to use virtual reality to help teach students intercultural competence.\u003C\/li\u003E\r\n\t\u003C\/ul\u003E\r\n\t\u003C\/li\u003E\r\n\u003C\/ul\u003E\r\n", "format": "filtered_html", "processed": "\u003Cp\u003EThe Center for Teaching Innovation (CTI) invited the Cornell teaching community to propose projects that explore new tools and emerging technologies, approaches, and teaching strategies to facilitate vibrant, challenging, and reflective learning experiences at Cornell.\u00a0The 2018 awardees include:\u003C\/p\u003E\n\n\u003Cul\u003E\u003Cli\u003EPsychology \u2013\u00a0\u003Cstrong\u003E\u003Cem\u003EKatherine Kinzler, Associate Professor\u003C\/em\u003E\u003C\/strong\u003E\n\n\t\u003Cul\u003E\u003Cli\u003EProject: to reimagine a current class by using a research-based approach to understand and combat gendered participation in their class.\u003C\/li\u003E\n\t\u003C\/ul\u003E\u003C\/li\u003E\n\t\u003Cli\u003EEcology \u0026amp; Evolutionary Biology \u2013\u00a0\u003Cem\u003E\u003Cstrong\u003EKelly Zamudio, Professor\/Abby Drake, Senior Lecturer\u003C\/strong\u003E\u003C\/em\u003E\n\t\u003Cul\u003E\u003Cli\u003EProject: to create an online evolutionary biology course that utilizes active learning techniques.\u003C\/li\u003E\n\t\u003C\/ul\u003E\u003C\/li\u003E\n\t\u003Cli\u003ENeurobiology \u0026amp; Behavior -\u00a0\u003Cem\u003E\u003Cstrong\u003EMark Sarvary, Senior Lecturer\u003C\/strong\u003E\u003C\/em\u003E\n\t\u003Cul\u003E\u003Cli\u003EProject: to develop a new learning space \u0022bio-imagination makerspace\u0022 with the investigative biology teaching laboratories.\u003C\/li\u003E\n\t\u003C\/ul\u003E\u003C\/li\u003E\n\t\u003Cli\u003EClassics \u2013\u00a0\u003Cem\u003E\u003Cstrong\u003ECourtney Roby, Associate Professor\/Andrew Hicks, Associate Professor\u003C\/strong\u003E\u003C\/em\u003E\n\t\u003Cul\u003E\u003Cli\u003EProject: to create new tools to assist in making their team-taught course \u0022The Art of Math\u0022 more active and engaging for their diverse group of students.\u003C\/li\u003E\n\t\u003C\/ul\u003E\u003C\/li\u003E\n\t\u003Cli\u003ECommunication \u2013\u00a0\u003Cem\u003E\u003Cstrong\u003EAndrea Won, Assistant Professor\/Connie Yuan, Professor\u003C\/strong\u003E\u003C\/em\u003E\n\t\u003Cul\u003E\u003Cli\u003EProject: to use virtual reality to help teach students intercultural competence.\u003C\/li\u003E\n\t\u003C\/ul\u003E\u003C\/li\u003E\n\u003C\/ul\u003E", "summary": ""
+    }
+    ],
+    "field_link_single":[],
+    "field_media_image":[ {
+        "target_id": 57, "target_type": "media", "target_uuid": "6a493924-094a-4f8c-9ec7-0d1bf96bf514", "url": "\/media\/57"
+    }
+    ],
+    "field_media_video":[],
+    "field_plain_type":[ {
+        "value": "Initiative"
+    }
+    ],
+    "field_service_term":[],
+    "field_tags":[ {
+        "target_id": 4, "target_type": "taxonomy_term", "target_uuid": "3b4a74f2-1da6-466d-99a3-3ba4c440021f", "url": "\/taxonomy\/term\/4"
+    }
+    ],
+    "field_teaser":[]
+}
+
+,
+{
+    "nid":[ {
+        "value": 450
+    }
+    ],
+    "uuid":[ {
+        "value": "88cdb8a5-53b6-4dac-b94f-6f8b7178f055"
+    }
+    ],
+    "vid":[ {
+        "value": 2136
+    }
+    ],
+    "langcode":[ {
+        "value": "en"
+    }
+    ],
+    "type":[ {
+        "target_id": "spotlight", "target_type": "node_type", "target_uuid": "483fd6ff-77ce-4ea3-8e26-fe3ba1c08144"
+    }
+    ],
+    "revision_timestamp":[ {
+        "value": "2018-09-06T16:45:57+00:00", "format": "Y-m-d\\TH:i:sP"
+    }
+    ],
+    "revision_uid":[ {
+        "target_id": 36, "target_type": "user", "target_uuid": "a6582049-dde1-4552-ad7b-c25c11b4cbfd", "url": "\/user\/36"
+    }
+    ],
+    "revision_log":[],
+    "status":[ {
+        "value": true
+    }
+    ],
+    "title":[ {
+        "value": "U-Wide Teaching Conference\u0027s Plenary Speaker is Jenny Knight"
+    }
+    ],
+    "uid":[ {
+        "target_id": 36, "target_type": "user", "target_uuid": "a6582049-dde1-4552-ad7b-c25c11b4cbfd", "url": "\/user\/36"
+    }
+    ],
+    "created":[ {
+        "value": "2018-09-06T16:44:16+00:00", "format": "Y-m-d\\TH:i:sP"
+    }
+    ],
+    "changed":[ {
+        "value": "2018-09-06T16:45:57+00:00", "format": "Y-m-d\\TH:i:sP"
+    }
+    ],
+    "promote":[ {
+        "value": false
+    }
+    ],
+    "sticky":[ {
+        "value": false
+    }
+    ],
+    "default_langcode":[ {
+        "value": true
+    }
+    ],
+    "revision_translation_affected":[ {
+        "value": true
+    }
+    ],
+    "moderation_state":[ {
+        "value": "published"
+    }
+    ],
+    "path":[ {
+        "alias": "\/spotlights\/u-wide-teaching-conferences-plenary-speaker-jenny-knight", "pid": 373, "langcode": "en"
+    }
+    ],
+    "menu_link":[],
+    "body":[],
+    "field_link_single":[ {
+        "uri": "https:\/\/teaching.cornell.edu\/programs\/graduate-students-postdoctoral-fellows\/workshops\/university-wide-get-set-teaching", "title": "", "options": []
+    }
+    ],
+    "field_media_image":[ {
+        "target_id": 82, "target_type": "media", "target_uuid": "c62d9304-c66a-4a24-b980-87b398e61d24", "url": "\/media\/82"
+    }
+    ],
+    "field_media_video":[],
+    "field_plain_type":[ {
+        "value": "Event"
+    }
+    ],
+    "field_service_term":[],
+    "field_tags":[ {
+        "target_id": 5, "target_type": "taxonomy_term", "target_uuid": "bbb9f29b-641d-44db-b62c-a87ec75fa62f", "url": "\/taxonomy\/term\/5"
+    }
+    ],
+    "field_teaser":[ {
+        "value": "\u003Cp\u003E\u003Cspan\u003ELearn about evidence-based techniques to improve student interactions and learning.\u003C\/span\u003E\u003C\/p\u003E\r\n", "format": "filtered_html", "processed": "\u003Cp\u003E\u003Cspan\u003ELearn about evidence-based techniques to improve student interactions and learning.\u003C\/span\u003E\u003C\/p\u003E"
+    }
+    ]
+}
+
 ]

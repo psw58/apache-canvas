@@ -8,25 +8,47 @@
     var spotlightTarget = '#spotlight';
     var notificationTarget = '#notification';
     var spotlightDataURL =  "./imports/spotlightdata.json";
+    var rssSpotlight = "https://test-ctiteach.pantheonsite.io/showcase/rss.xml";
+    var jsonSpotlight = 'https://psw-ctiteach.pantheonsite.io/spotlight/feed.json';
     var spotlightContent = {
         "title": "Announcements"
     }
     var notificationdatURL = "./imports/notificationdata.json";
+    var rssService = new RssService( rssSpotlight );
     var spotlightService = new Service(spotlightDataURL);
     var notificationService = new Service(notificationdatURL);
 
-    spotlightService.init()
+    var jsonService = new JsonService(jsonSpotlight);
+    
+    //CTI must enable view display feed at /showcase/rss.xml
+    jsonService.init()
         .done(
             function(data){
                 if (data){
-                    var view = new SpotlightView(data, spotlightContent);
-                    $(spotlightTarget).html( view.render().$el );       
+                    console.log(data)
+                    //var view = new SpotlightView(data, spotlightContent);
+                    //$(spotlightTarget).html( view.render().$el );       
                 }
             }
         )
         .fail( 
-            //handle this
-        )
+            function(){
+                //used saved data
+                console.log("failed to load data");
+                spotlightService.init()
+                .done(
+                    function(data){
+                        if (data){
+                            var view = new SpotlightView(data, spotlightContent);
+                            $(spotlightTarget).html( view.render().$el );       
+                        }
+                    }
+                )
+                .fail( 
+                    //handle this
+                )
+            }
+        )    
 
     notificationService.init()
         .done(

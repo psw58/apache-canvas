@@ -1,7 +1,7 @@
 //data obj should be json in format [{obj1:''},{obj2:''}....]
 var SpotlightView = function (data, content){
     //the maximun nuber of spotlights
-    var MAXLENGTH = 2
+    var MAXLENGTH = 2;
 
     this.init = function(){
         this.$el = $('<div/>');
@@ -15,12 +15,14 @@ var SpotlightView = function (data, content){
         var hinner = '';
         if (myData.length > MAXLENGTH) { myData = myData.splice(0,MAXLENGTH) };
         $.each(myData, function(i, el){
-            if (el.url && el.title && el.img && el.img.src && el.img.alt){
+            var $el = $('<div/>').html(el.description);
+            var alt = $($el).find('img').attr('alt');
+            if (true){
                 hinner += '<div class="card"> \
-                <div role="article" class="node"> <a href="'+el.url+'" rel="bookmark"> \
+                <div role="article" class="node"> <a href="'+el.link+'" rel="bookmark"> \
                         <div class="group-image field-group"> \
-                            <div class="field field-name-field-image"> <img src="'+el.img.src+'" \
-                                    width="720" height="480" alt="'+el.img.alt+'" /> \
+                            <div class="field field-name-field-image"> <img src="'+el.thumbnail                            +'" \
+                                    width="720" height="480" alt="'+alt+'" /> \
                             </div> \
                         </div> \
                         <div class="group-fields field-group"> \
@@ -32,7 +34,8 @@ var SpotlightView = function (data, content){
                     </a> </div> \
             </div>';
             }else{
-                condole.warn("invalid JSON data @TODO do fallback");
+                console.warn("invalid JSON data @TODO do fallback");
+                console.log(el);
             }
         })
         return hinner;
