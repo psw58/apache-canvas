@@ -1,4 +1,8 @@
 # apache-canvas
+ * @name index.js
+ * @author psw58@cornell.edu
+ * @version 0.5 release Alpha
+ * @repo https://github.com/psw58/apache-canvas
 
 ## using lando apache simple server
 .lando.yml
