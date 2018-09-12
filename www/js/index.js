@@ -103,8 +103,10 @@
     }
     else{
         //debug is enabled
-        var view1 = new SpotlightView(buSpotlightData, spotlightContent);
-        $(spotlightTarget).hide().html( view1.render().$el ).fadeIn(FADEINSPEED );;   
+        if (buSpotlightData && buSpotlightData.length){
+            var view1 = new SpotlightView(buSpotlightData, spotlightContent);
+            $(spotlightTarget).hide().html( view1.render().$el ).fadeIn(FADEINSPEED );   
+        }
 
         if (buNotificationData && buNotificationData.length){
             var view2 = new NotificationView(buNotificationData[0], spotlightContent);
