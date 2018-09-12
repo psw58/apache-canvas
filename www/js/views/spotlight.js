@@ -1,19 +1,35 @@
-//data obj should be json in format [{obj1:''},{obj2:''}....]
+/**
+ * 
+ * @param {Array} data array of objects in format [{obj1:''},{obj2:''}....]
+ * @param {object} content variable set in index.js
+ */
 var SpotlightView = function (data, content){
-    //the maximun nuber of spotlights
-    var MAXLENGTH = 3;
-
+    'use strict';
+    /**
+     * @description declares a jQuery html object of this class
+     */
     this.init = function(){
         this.$el = $('<div/>');
     }
 
-    this.template = function( data, content ){
-        return '<h2 class="h3">'+content.title+'</h2> <div class="showcase">'+this.listTemplate(data)+ '</div>';
+    /**
+     * 
+     * @param {array} data passed data
+     * @param {object} content passed content obj
+     * @returns {string} HTML string
+     */
+    this.template = function( myData, myContent ){
+        return '<h2 class="h3">'+myContent.title+'</h2> <div class="showcase">'+this.listTemplate(myData, myContent)+ '</div>';
     }
 
-    this.listTemplate = function( myData ){
+    /**
+     * 
+     * @param {array} myData passed data object
+     * @returns {string} html string
+     */
+    this.listTemplate = function( myData, myContent ){
         var hinner = '';
-        if (myData && (myData.length > MAXLENGTH)) { myData = myData.splice(0,MAXLENGTH) };
+        if (myData && (myData.length > myContent.maxlength)) { myData = myData.splice(0,myContent.maxlength) };
         $.each(myData, function(i, el){
             var $el = $('<div/>').html(el.description);
             el.alt = $($el).find('img').attr('alt');
@@ -40,11 +56,14 @@ var SpotlightView = function (data, content){
         return hinner;
     }
 
+    /**
+     * @returns jquery html object
+     */
     this.render = function( ){
         this.$el.html( this.template( data, content ) )
         return this;
     }
-
+    
     this.init();
 
 }

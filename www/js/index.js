@@ -1,14 +1,22 @@
 /**
- * index.js
+ * @name index.js
+ * @author psw58@cornell.edu
+ * @version 0.5
+ * @since Sept-12-18
+ * @description Iniltializes the app and declares variables
  * - initialize the app
- * use anonymous self-invoking function to not pollute namespace
- * requires services, templates, and rss.xml data feed
+ * - use anonymous self-invoking function to not pollute namespace
+ * @requires jQuery
+ * @requires services fetches data and returns a data object
+ * @requires templates recieve data obj and return a view object
+ * 
  */
-
-(function () {
+(function ($) {
+    'use strict';
     //define debug variables
     var USE_CTI_RSS = true;
     var DEBUG = false;
+    //jQuery FadeIn speed of targets
     var FADEINSPEED = 200;
 
     //The notification field labels used on the cti site this is needed to map content from CTI to 
@@ -17,9 +25,10 @@
         "color":"Select color option"
     };
 
-    //should this come from Drupal?
+    //should this come from CTI?
     var spotlightContent = {
-        "title": "Announcements"
+        "title": "Announcements",
+        "maxlength": 3
     };
 
     //targets
@@ -34,7 +43,7 @@
     var localSpotlight = "./imports/spotlightdata.xml";
     var localNotification = './imports/notificationdata.xml';
 
-    //back up data incase there is a network error 
+    //back up data incase ajax request fails
     var buSpotlightData = [{"link":"https://teaching.cornell.edu/","title":"Canvas at Cornell","thumbnail":"./images/Spotlight Image 2 canvas_0.jpg","alt":"The logo for the Learning Mangement System Canvas"}];
     var buNotificationData = [{"message":"Notification: Welcome to Canvas, Make sure to review the Canvas terms of use","selected_color_option":"6"}];
 
@@ -50,7 +59,7 @@
 
     /* 
     *  Fetch xml and render content in:
-    *   Announcements,
+    *   Announcements/Spotlight,
     *   Notifications
     * */
     if ( !DEBUG ){
@@ -102,4 +111,4 @@
         }
     }
 
-})();
+})(jQuery);

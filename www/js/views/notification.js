@@ -1,9 +1,12 @@
-    /*start Notifications
-    * Modifies innerHTMl of div with id of "notification"
-    * Use "selected_option" to change the selected background color of alert message 
-    * Use message to edit the notification message contents
-    * */
-   var NotificationView = function (data) { 
+/**
+* 
+* @description Creates a Jquery Html object
+* Use "selected_option" to change the selected background color of alert message 
+* Use message to edit the notification message contents
+* @param {object} data a notification data object to set content
+*/
+var NotificationView = function (data) { 
+    'use strict';
     //theme color options defined in 
     var options = {
         1:"default",

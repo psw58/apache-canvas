@@ -1,8 +1,18 @@
-//using Rssfeed from php cors enabled site
+/**
+ * Description: fetch a xml document and return a data object
+ * 
+ * @param {string} url a string to the fetched .xml file location
+ * @param {Object} NotificationLabels the maping values in the xml description
+ */
 var RssSpotlightService = function( url ){
+    'use strict';
     var data;
 
-    //parse the xml and return js obj
+    /**
+     * 
+     * @param {jQuery parseXML Object} $xml Should contain items
+     * @returns {Array} an array of objects
+     */
     function parseRSS($xml){
         var items = $($xml).find('item');
         var myArr = []
@@ -27,8 +37,11 @@ var RssSpotlightService = function( url ){
             
         });
         return myArr;
-    } 
+    }
 
+    /**
+     * @returns {jQuery promise} .done or .fail
+     */
     this.init = function(){
         var deferred = $.Deferred();
         $.ajax({
@@ -50,14 +63,24 @@ var RssSpotlightService = function( url ){
     }
 }
 
+/**
+ * 
+ * @param {string} url a string to the fetched .xml file location
+ * @param {Object} NotificationLabels the maping values in the xml description
+ */
 var RssNotificationService = function( url, NotificationLabels  ){
     var data;
-    //parse the xml and return js obj
     var myArr = [];
+
+    /**
+     * 
+     * @param {jQuery parseXML Object} $xml Should contain items
+     * @returns {Array} an array of objects
+     */
     function parseRSS($xml){
         var items = $($xml).find('item');
         $(items).each(function () {
-            myobj = {};
+            var myobj = {};
             var $el = $(this);
             var desc = $el.find('description').text();
             //search the description for the image
@@ -76,6 +99,9 @@ var RssNotificationService = function( url, NotificationLabels  ){
         return myArr;
     } 
 
+    /**
+     * @returns {jQuery promise} done or fail
+     */
     this.init = function(){
         var deferred = $.Deferred();
         var ret = [];
@@ -97,75 +123,3 @@ var RssNotificationService = function( url, NotificationLabels  ){
         return deferred.promise( data );
     }
 }
-/*
-var Service = function( url ){
-    var data;
-    this.init = function(){
-        var deferred = $.Deferred();
-        $.getJSON( url , function(fetchedData) {
-            data = fetchedData;
-            deferred.resolve(data);
-        })
-        //@TODO handle errors
-        return deferred.promise( data );
-    }
-    
-}
-
-//using https://rss2json.com API to go around CORS
-var RssJsonService = function( url ){
-    var data;
-    var api = 'exd0j7x7qlnr5kjxvwpd0dur7gutotdnw6ozo6sa'
-    this.init = function(){
-        var deferred = $.Deferred();
-        $.ajax({
-            type: 'GET',
-            url: "https://api.rss2json.com/v1/api.json?rss_url=" + url,
-            dataType: 'jsonp',
-            data: {
-                rss_url: url,
-                api_key: api
-            },
-            success: function(rss) {
-              console.log(rss.feed);    
-              //console.log( JSON.stringify(rss.items));
-              //an array of spotlight items
-              data = rss.items
-              deferred.resolve(data);
-            }
-        });  
-        return deferred.promise( data );
-    }
-}
-*/
-
-/* unused dont render until both data are recieved
-var Service = function( url ){
-    var that = this;
-    var data = {};
-    var notification;
-    var spotlight;
-
-    this.init = function(){
-        var deferred = $.Deferred();
-        $.when(
-            $.getJSON( "./imports/spotlightdata.json", function(spotlightData) {
-                spotlight = spotlightData;
-              }),
-            $.getJSON( "./imports/notificationdata.json", function(notificationData) {
-                notification = notificationData;
-            })              
-        ).then(
-            function( objs ){
-                data.notification = notification;
-                data.spotlight = spotlight; 
-                deferred.resolve(data);
-            }
-            
-        )
-        return deferred.promise( data );
-    }
-}
-*/
-
-
