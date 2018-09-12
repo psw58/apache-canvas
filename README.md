@@ -1,5 +1,5 @@
 # apache-canvas
- * @name index.js
+ * @name apache-canvas
  * @author psw58@cornell.edu
  * @version 0.5 release Alpha
  * @repo https://github.com/psw58/apache-canvas
