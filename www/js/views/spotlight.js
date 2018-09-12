@@ -1,7 +1,7 @@
 //data obj should be json in format [{obj1:''},{obj2:''}....]
 var SpotlightView = function (data, content){
     //the maximun nuber of spotlights
-    var MAXLENGTH = 2;
+    var MAXLENGTH = 3;
 
     this.init = function(){
         this.$el = $('<div/>');
@@ -17,7 +17,7 @@ var SpotlightView = function (data, content){
         $.each(myData, function(i, el){
             var $el = $('<div/>').html(el.description);
             el.alt = $($el).find('img').attr('alt');
-            if (true){
+            if (el.link && el.thumbnail && el.title ){
                 hinner += '<div class="card"> \
                 <div role="article" class="node"> <a href="'+el.link+'" rel="bookmark"> \
                         <div class="group-image field-group"> \
@@ -34,8 +34,7 @@ var SpotlightView = function (data, content){
                     </a> </div> \
             </div>';
             }else{
-                console.warn("invalid JSON data @TODO do fallback");
-                console.log(el);
+                console.warn("invalid obj data");
             }
         })
         return hinner;

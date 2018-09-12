@@ -2,7 +2,7 @@
  * index.js
  * - initialize the app
  * use anonymous self-invoking function to not pollute namespace
- * requires service, template, and rss.xml data feed
+ * requires services, templates, and rss.xml data feed
  */
 
 (function () {

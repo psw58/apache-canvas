@@ -4,7 +4,7 @@
     * Use message to edit the notification message contents
     * */
    var NotificationView = function (data) { 
-
+    //theme color options defined in 
     var options = {
         1:"default",
         2:"blue-green",

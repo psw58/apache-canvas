@@ -5,7 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Canvas at Cornell</title>
+    <meta name="Description" content="Login page for cornell Canvas.">
+    <title>CU Canvas</title>
     <link rel="shortcut icon" href="/images/cornell/favicon.ico" type="image/vnd.microsoft.icon">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,700i|Lato:300,400" rel="stylesheet">
     <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
@@ -110,10 +111,10 @@
                                 <a class='link-button' href='https://cornell.instructure.com/login/canvas'>Guest</a>
                             </p>
                             <p>
-                                Help logging in
-                                <a href='#'>Canvas Terms of Use FAQ</a>
+                                <a href='#terms_of_use'>Canvas Terms of Use FAQ</a>
                             </p>
                         </div>
+                        <div id='terms_of_use'>
                         <h2>Cornell University Copyright Notification</h2>
                         <p>
                             The University expects that users of these services will in good faith post material in
@@ -153,6 +154,7 @@
                             <a href='http://www.cit.cornell.edu/services/identity/cuweblogin/more.html'>CUWebLogin
                                 Credentials</a>
                         </p>
+                        </div>
                     </section>
                 </article>
                 <div id="sidebar-bottom" class="secondary" role="complementary">
@@ -219,7 +221,8 @@
     </footer>
 
     <!-- jQuery and Contrib Components -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!--script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <!-- backward compatibity for old browsers -->
     <script src="js/contrib/modernizr.js"></script>
 
@@ -233,6 +236,18 @@
     <script src="js/views/notification.js"></script>
     <script src="js/index.js"></script>
 
+    <!-- google analytics-->
+    <!-- https://confluence.cornell.edu/display/customdev/Google+Analytics+track+external+links -->
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+      
+        ga('create', 'UA-12345678-9', 'auto');
+        ga('send', 'pageview');
+      
+      </script>
 </body>
 
 </html>
