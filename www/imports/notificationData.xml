@@ -1,30 +1,30 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://psw-ctiteach.pantheonsite.io/notification/rss.xml">
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://canvas-ctiteach.pantheonsite.io/notification/rss.xml">
   <channel>
-    <title>notification</title>
-    <link>https://psw-ctiteach.pantheonsite.io/notification/rss.xml</link>
+    <title>Canvas Notification Feed</title>
+    <link>https://canvas-ctiteach.pantheonsite.io/notification/rss.xml</link>
     <description/>
     <language>en</language>
     
     <item>
-  <title>first notification</title>
-  <link>https://psw-ctiteach.pantheonsite.io/notification/first-notification</link>
-  <description>first notification
-  &lt;div data-quickedit-field-id="node/462/field_notification_message/en/rss"&gt;
-    &lt;div&gt;message&lt;/div&gt;
-              &lt;div&gt;notification    mm/dd/yy: A notification bar to provide users with additional information, and changes background color, with seven different color options. Which is Often Long Enough to Wrap to a Second Line", &lt;/div&gt;
-          &lt;/div&gt;
-&lt;span data-quickedit-field-id="node/462/uid/en/rss"&gt;&lt;a title="View user profile." href="https://psw-ctiteach.pantheonsite.io/user/13"&gt;psw58&lt;/a&gt;&lt;/span&gt;
-&lt;span data-quickedit-field-id="node/462/created/en/rss"&gt;Tue, 09/11/2018 - 12:25&lt;/span&gt;
+  <title>Winter Notification</title>
+  <link>https://canvas-ctiteach.pantheonsite.io/canvasnotification/winter-notification</link>
+  <description>Winter Notification&lt;span data-quickedit-field-id="node/464/uid/en/rss"&gt;&lt;a title="View user profile." href="https://canvas-ctiteach.pantheonsite.io/user/13"&gt;psw58&lt;/a&gt;&lt;/span&gt;
+&lt;span data-quickedit-field-id="node/464/created/en/rss"&gt;Wed, 09/12/2018 - 11:55&lt;/span&gt;
 
-  &lt;div data-quickedit-field-id="node/462/field_selected_color_option/en/rss"&gt;
-    &lt;div&gt;selected_color_option&lt;/div&gt;
-              &lt;div&gt;6&lt;/div&gt;
+  &lt;div data-quickedit-field-id="node/464/field_message/en/rss"&gt;
+    &lt;div&gt;Message&lt;/div&gt;
+              &lt;div&gt; Winter Notification. This bar can provide users with additional information, and changes background color, with seven different color options.&lt;/div&gt;
+          &lt;/div&gt;
+
+  &lt;div data-quickedit-field-id="node/464/field_selected_color_optio_/en/rss"&gt;
+    &lt;div&gt;Select color option&lt;/div&gt;
+              &lt;div&gt;1&lt;/div&gt;
           &lt;/div&gt;
 </description>
-  <pubDate>Tue, 11 Sep 2018 16:25:36 +0000</pubDate>
+  <pubDate>Wed, 12 Sep 2018 15:55:13 +0000</pubDate>
     <dc:creator>psw58</dc:creator>
-    <guid isPermaLink="false">462 at https://psw-ctiteach.pantheonsite.io</guid>
+    <guid isPermaLink="false">464 at https://canvas-ctiteach.pantheonsite.io</guid>
     </item>
 
   </channel>

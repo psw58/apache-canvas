@@ -11,6 +11,12 @@
     var DEBUG = false;
     var FADEINSPEED = 200;
 
+    //The notification field labels used on the cti site this is needed to map content from CTI to 
+    var NotificationLabels = {
+        "message":"Message",
+        "color":"Select color option"
+    };
+
     //should this come from Drupal?
     var spotlightContent = {
         "title": "Announcements"
@@ -21,8 +27,8 @@
     var notificationTarget = '#notification';
 
     //rss CTI feeds
-    var rssSpotlight = "https://psw-ctiteach.pantheonsite.io/showcase/rss.xml";
-    var rssNotification = 'https://psw-ctiteach.pantheonsite.io/notification/rss.xml';
+    var rssSpotlight = "https://canvas-ctiteach.pantheonsite.io/showcase/rss.xml";
+    var rssNotification = 'https://canvas-ctiteach.pantheonsite.io/notification/rss.xml';
 
     //local RSS feeds edit these feeds for local development
     var localSpotlight = "./imports/spotlightdata.xml";
@@ -35,20 +41,23 @@
     if (USE_CTI_RSS){
         //use RSS feed from CTI 
         var rssSpotlightService = new RssSpotlightService( rssSpotlight );
-        var rssNotificationService = new RssNotificationService( rssNotification );
+        var rssNotificationService = new RssNotificationService( rssNotification, NotificationLabels );
     }else{
         //use xml data stored on this server
         var rssSpotlightService = new RssSpotlightService( localSpotlight );
-        var rssNotificationService = new RssNotificationService( localNotification );
+        var rssNotificationService = new RssNotificationService( localNotification, NotificationLabels );
     }
 
-    //CTI must enable view display feed at /showcase/rss.xml
-    if (!DEBUG){
+    /* 
+    *  Fetch xml and render content in:
+    *   Announcements,
+    *   Notifications
+    * */
+    if ( !DEBUG ){
         rssSpotlightService.init()
             .done(
                 function(data){
                     if (data && data.length){
-                        
                         var view = new SpotlightView(data, spotlightContent);
                         $(spotlightTarget).hide().html( view.render().$el ).fadeIn(FADEINSPEED );     
                     }
@@ -56,12 +65,14 @@
             )
             .fail( 
                 function(){
+                    console.log('XML parse failed using back up');
                     var view = new SpotlightView(buSpotlightData, spotlightContent);
                     $(spotlightTarget).hide().html( view.render().$el ).fadeIn(FADEINSPEED );   
                 }
             )    
-        //initialize notification and parse RSS fed from CTI
-        /* this requires notification view to be implimented 
+        /*
+        * initialize notification and parse RSS fed from CTI
+        * this requires notification view to be implimented 
         */
         rssNotificationService.init()
             .done(
@@ -81,8 +92,7 @@
             )
     }
     else{
-
-        //debug local
+        //debug is enabled
         var view1 = new SpotlightView(buSpotlightData, spotlightContent);
         $(spotlightTarget).hide().html( view1.render().$el ).fadeIn(FADEINSPEED );;   
 

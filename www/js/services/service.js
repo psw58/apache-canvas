@@ -34,22 +34,23 @@ var RssSpotlightService = function( url ){
         $.ajax({
             type: 'GET',
             url: url,
-            success: function(doc) {  
+            success: function(doc) {
               var xml = $(doc).find('rss').html();
               var $xml = $($.parseXML(xml));
               data = parseRSS( $xml );
               deferred.resolve(data);
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) { 
-                console.log("Status: " + textStatus); alert("Error: " + errorThrown); 
-                deferred.fail();
+                console.log("Status: " + textStatus); 
+                //console.log("Error: " + errorThrown); 
+                deferred.reject();
             }   
         });  
         return deferred.promise( data );
     }
 }
 
-var RssNotificationService = function( url ){
+var RssNotificationService = function( url, NotificationLabels  ){
     var data;
     //parse the xml and return js obj
     var myArr = [];
@@ -64,9 +65,9 @@ var RssNotificationService = function( url ){
             var divs = $desc.find('div');
             $(divs).each(function(i ,el){
                 var $div = $(this);
-                if ($div.text() == "message"){
+                if ($div.text() == NotificationLabels.message ){
                     myobj.message = $(divs[i+1]).text();
-                }else if( $div.text() == "selected_color_option"){
+                }else if( $div.text() == NotificationLabels.color ){
                     myobj.selected_color_option = $(divs[i+1]).text();
                 }
             })
@@ -88,8 +89,9 @@ var RssNotificationService = function( url ){
               deferred.resolve(data);
             },
             error: function(XMLHttpRequest, textStatus, errorThrown) { 
-                console.log("Status: " + textStatus); alert("Error: " + errorThrown); 
-                deferred.fail();
+                console.log("Status: " + textStatus);
+                //console.log("Error: " + errorThrown); 
+                deferred.reject();
             }   
         });  
         return deferred.promise( data );
