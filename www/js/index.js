@@ -1,11 +1,12 @@
 /**
  * @name index.js
  * @author psw58@cornell.edu
- * @version 0.5
- * @since Sept-12-18
- * @description Iniltializes the app and declares variables
- * - initialize the app
- * - use anonymous self-invoking function to not pollute namespace
+ * @version 0.5 release Alpha
+ * @description. initialize the app
+ * @summary
+ *  - uses anonymous self-invoking function to not pollute namespace
+ *  - Fetches service data -> get view object -> render it as html in target
+ *  - Has built in redundancy and fail safe
  * @requires jQuery
  * @requires services fetches data and returns a data object
  * @requires templates recieve data obj and return a view object
