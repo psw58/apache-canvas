@@ -6,7 +6,7 @@
  * @summary
  *  - uses anonymous self-invoking function to not pollute namespace
  *  - Fetches service data -> get view object -> render it as html in target
- *  - Has built in redundancy and fail safe
+ *  - Has built in redundancy and fallback
  * @requires jQuery
  * @requires services fetches data and returns a data object
  * @requires templates recieve data obj and return a view object
