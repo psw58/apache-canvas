@@ -29,6 +29,7 @@ var RssSpotlightService = function (url) {
             var $el = $(this);
             myobj.link = $el.find('link').text();
             myobj.title = $el.find('title').text();
+            myobj.description = $el.find('description').text();
             var desc = $el.find('description').text();
             //search the description for the image
             var $desc = $('<div/>').html(desc);

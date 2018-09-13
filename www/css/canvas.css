@@ -17,7 +17,8 @@
 
 div.card div.node {
   border-bottom: 1px solid #ebebeb;
-  padding-bottom: 3em; }
+  padding-bottom: 1em;
+  /*psw changed from 3em */ }
 
 div.spotlight div.card {
   -moz-box-shadow: none;
@@ -36,7 +37,8 @@ div.spotlight div.card {
   /*background-image: url('./images/cti/canvas transparentlogo3.png');*/
   background-repeat: no-repeat;
   background-position: -200px;
-  margin-bottom: 1.5em; }
+  /* changed psw bottom margin */
+  margin-bottom: 4em; }
 
 a.link-button {
   font-size: 24px;
@@ -57,5 +59,8 @@ a.link-button:active, a.link-button:hover, a.link-button:focus {
 #notification i {
   padding-right: 5px;
   font-size: 1.2em; }
+
+.content-block {
+  margin: 0px 0 0em !important; }
 
 /*# sourceMappingURL=canvas.css.map */

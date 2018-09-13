@@ -33,6 +33,7 @@ var SpotlightView = function (data, content){
         $.each(myData, function(i, el){
             var $el = $('<div/>').html(el.description);
             el.alt = $($el).find('img').attr('alt');
+            el.type = $($el).find('div').last().text();
             if (el.link && el.thumbnail && el.title ){
                 hinner += '<div class="card"> \
                 <div role="article" class="node"> <a href="'+el.link+'" rel="bookmark"> \
@@ -42,7 +43,7 @@ var SpotlightView = function (data, content){
                             </div> \
                         </div> \
                         <div class="group-fields field-group"> \
-                            <div class="field field-name-category category"> </div> \
+                            <div class="field field-name-category category">'+el.type+'</div> \
                             <div class="field field-name-title title"> \
                                 <h3 class="sans">'+el.title+'</h3> \
                             </div> \
