@@ -69,15 +69,15 @@
                 function(data){
                     if (data && data.length){
                         var view = new SpotlightView(data, spotlightContent);
-                        $(spotlightTarget).hide().html( view.render().$el ).fadeIn(FADEINSPEED );     
+                        $(spotlightTarget).html( view.render().$el );   
                     }
                 }
             )
             .fail( 
                 function(){
-                    console.log('XML parse failed using back up');
+                    console.log('XML parse spotlight failed using back up');
                     var view = new SpotlightView(buSpotlightData, spotlightContent);
-                    $(spotlightTarget).hide().html( view.render().$el ).fadeIn(FADEINSPEED );   
+                    $(spotlightTarget).html( view.render().$el );   
                 }
             )    
         /*
@@ -90,14 +90,15 @@
                     if (data && data.length){
                         var message = data[0];//assume there is only one element
                         var notificationView = new NotificationView(message);
-                        $(notificationTarget).hide().html( notificationView.render().$el ).fadeIn(FADEINSPEED );       
+                        $(notificationTarget).html( notificationView.render().$el );       
                     }
                 }
             )
             .fail( 
                 function(){
+                    console.log('XML parse notification failed using back up');
                     var view = new NotificationView(buNotificationData[0], spotlightContent);
-                    $(notificationTarget).hide().html( view.render().$el ).fadeIn(FADEINSPEED );   
+                    $(notificationTarget).html( view.render().$el );   
                 }
             )
     }
@@ -105,12 +106,12 @@
         //debug is enabled
         if (buSpotlightData && buSpotlightData.length){
             var view1 = new SpotlightView(buSpotlightData, spotlightContent);
-            $(spotlightTarget).hide().html( view1.render().$el ).fadeIn(FADEINSPEED );   
+            $(spotlightTarget).html( view1.render().$el );   
         }
 
         if (buNotificationData && buNotificationData.length){
             var view2 = new NotificationView(buNotificationData[0], spotlightContent);
-            $(notificationTarget).hide().html( view2.render().$el ).fadeIn(FADEINSPEED ); 
+            $(notificationTarget).html( view2.render().$el ); 
         }
     }
 
