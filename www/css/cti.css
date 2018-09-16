@@ -1241,14 +1241,17 @@ a.view-all-events:active {
   .footer-toolkit .flex a {
     font-size: 15px; }
   /* Homepage */
-  .banner-flex:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    bottom: 0;
-    width: 50%;
-    background: #cce0e6; }
+  /* psw remove 
+.banner-flex:before {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	width: 50%;
+	background: #cce0e6;
+}
+*/
   .quote {
     margin: 0 0 4em; }
   .quote q {

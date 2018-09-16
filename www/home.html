@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Template - Cornell CSS Framework</title>
+
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,700i|Lato:300,400" rel="stylesheet">
+
+    <link href="fonts/font-awesome.min.css" rel="stylesheet">
+    <link href="fonts/material-design-iconic-font.min.css" rel="stylesheet">
+    <link href="fonts/cornell-custom.css" rel="stylesheet">
+
+    <link href="css/base.css" rel="stylesheet">
+    <link href="css/cornell.css" rel="stylesheet">
+    <link href="css/cwd_slider.css" rel="stylesheet">
+    <link href="css/cwd_utilities.css" rel="stylesheet">
+    <link href="css/cti.css" rel="stylesheet">
+    <link href="css/bootstrap/bootstrap-grid.css" rel="stylesheet">
+    <!-- link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+        crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script -->
+    <style>
+        #site-header div.primary {
+            display: flex;
+            background: #cce0e6;
+            margin-bottom: 4em;
+            padding: 20px;
+        }
+
+        #site-header>div>div>div>div>div.primary>div:nth-child(1) {
+            min-width: 50%;
+            text-align: center;
+            margin-right: 1em;
+            margin-bottom: 3em;
+        }
+
+        #site-header>div>div>div {
+            padding-top: 2em;
+            ;
+        }
+
+        .child {
+            /*padding-left: 42%;*/
+        }
+
+        .para {
+            margin-bottom: 1em;
+        }
+
+        #home-events>div>div>div.col {
+            /*
+            padding-top: 1em;
+            padding-bottom: 1em;
+            border-bottom: 1px solid #ddd;
+            */
+            border-left: 3px solid #b31b1b;
+        }
+
+        #home-events>div>div:nth>div.col-sm-4 {
+            /*border-bottom: 1px solid #ddd;*/
+        }
+
+        #home-events>div>div.row {
+            padding: 2em 0;
+            border-bottom: solid 1px #ddd;
+        }
+
+/* beginning of import */
+em{
+    color: #b31b1b;
+} 
+
+#home-events h2 {
+    margin-bottom: 0em;
+}
+#site-header > div > div.container-fluid > div{
+    margin-bottom: 20px;
+}
+
+.flex{
+    display: flex;
+
+}
+
+#notification > div{
+    margin-bottom: 10px;
+}
+
+.showcase h3{
+        font-size: 14px;
+        font-weight: 500;
+        line-height: 1.4;
+}
+
+div.card  div.node{
+    border-bottom: 1px solid #ebebeb;
+    padding-bottom: 1em;
+    /*psw changed from 3em */
+}
+
+div.spotlight  div.card {
+    -moz-box-shadow: none;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+    padding-bottom: 5px;
+    margin-bottom: 5px;
+    border-bottom: 3px solid #b31b1b;
+}
+
+#main-article > section > div.primary{
+    background: #cce0e6;
+    text-align: center;
+    padding: 30px;
+    /*padding-left: 50px;*/
+    background-size: contain;                  
+    /*background-image: url('./images/cti/canvas transparentlogo3.png');*/
+    background-repeat:   no-repeat;
+    background-position: -200px; 
+    /* changed psw bottom margin */      
+    margin-bottom: 4em;       
+}
+
+a.link-button{
+    font-size: 24px;
+    padding: 0.5em 1em;
+    min-width: 191px;
+} 
+a.link-button:active, a.link-button:hover, a.link-button:focus{
+    background: #315163;
+    color:#fff;
+}	
+
+.quote p {
+    text-indent: 0em;
+}
+
+@media (max-width: 768px){
+    .mobile-hidden{
+        display:none;
+    }   
+} 
+
+#notification i  {
+    padding-right: 5px;
+    font-size: 1.2em;
+}
+.content-block {
+    margin: 0px 0 0em !important;
+}     
+
+/* end of import */
+
+        @media (min-width: 768px) {
+            #sidebar-top {
+                width: 33%;
+                padding-left: 30px;
+            }
+
+            #site-header>div>div>div>div>div.primary {
+                width: 66%;
+            }
+        }
+
+        @media only screen and (max-width: 767px) {
+            #site-header div.primary {
+                display: block;
+            }
+
+        }
+
+        @media only screen and (max-width: 991px) {
+            .child {
+                padding-left: 3em;
+            }
+        }
+    </style>
+    <!--[if lt IE 9]>
+	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+	<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+</head>
+
+<body class="cu-seal home">
+
+    <div id="skipnav"><a href="#main">Skip to main content</a></div>
+
+    <div id="brand" class="band">
+        <header id="cu-header">
+            <div class="cu45-helper"></div>
+            <div class="container-fluid cu-brand">
+                <h1 class="cu-logo"><a href="http://www.cornell.edu"><img class="sr-only" src="images/cornell/bold_cornell_logo_simple_b31b1b.svg"
+                            alt="Cornell University" width="245" height="62"></a></h1>
+                <div class="cu-unit">
+                    <h2><a href="/">Center for Teaching Innovation</a></h2>
+                </div>
+                <div class="buttons">
+                    <nav id="utility-navigation" aria-label="Supplementary Navigation">
+                        <ul class="list-menu links">
+                            <li><a href="#">About Us</a></li>
+                            <li><a href="#">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <header id="site-header">
+            <div class="flex banner-flex">
+                <div class="band">
+                    <div class="container-fluid sidebar sidebar-right">
+                        <div class="row">
+                            <div class="primary">
+                                <div>
+                                    <h2 class='h1'>Log Into <em>Canvas</em></h2>
+                                    <p>
+                                        <a class='link-button' href='https://cornell.instructure.com/login/saml/1'>Cornell
+                                            NetID</a>
+                                    </p>
+                                    <p>
+                                        <a class='link-button' href='https://cornell.instructure.com/login/saml/2'>Weill
+                                            ID</a>
+                                    </p>
+                                    <p>
+                                        <a class='link-button' href='https://cornell.instructure.com/login/canvas'>Guest</a>
+                                    </p>
+                                </div>
+                                <div>
+                                    <h3>Cornell University Copyright Notification</h3>
+                                    <p>The University expects that users of these services will in good faith post
+                                        material in compliance with copyright laws. If you have questions about the use
+                                        of any material, please send mail to copyright@cornell.edu. To the best of my
+                                        knowledge, I assert that all the copyrighted material that I will post on this
+                                        site will be used in a manner consistent with copyright law. I either have
+                                        permission to use the material or believe, after performing a "fair use"
+                                        assessment, that it falls within the "fair use" exception to the requirement of
+                                        getting permission.
+                                    </p>
+                                </div>
+
+                            </div>
+
+                            <div id="sidebar-top" class="secondary">
+                                <h2 class='mobile-hidden'>Help & Support links</h2>
+                                <nav class="secondary-navigation mobile-expander" aria-label="Section Navigation">
+                                    <div class="">
+                                        <ul class="menu">
+                                            <li class="current-menu-ancestor current-menu-parent">
+                                                <ul class="sub-menu">
+                                                    <li class="menu-item"><a href="https://community.canvaslms.com/community/answers/guides/">Search
+                                                            the Canvas Guides</a></li>
+                                                    <li class="menu-item"><a href="mailto:support@instructure.com">Support</a></li>
+                                                    <li class="menu-item"><a href="https://teaching.cornell.edu/">Center
+                                                            for
+                                                            Teaching Innovation</a></li>
+                                                    <li class="menu-item"><a href="https://it.cornell.edu/canvas/">Blackboard
+                                                            to
+                                                            Canvas Migration </a></li>
+                                                    <li class="menu-item"><a href="https://www.instructure.com/">About
+                                                            Canvas</a>
+                                                    </li>
+                                                </ul>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                </nav>
+                            </div>
+
+                            <!-- div class="secondary">
+								<div class="quote">
+									<h2 class="-sr-and-mobile-only">Teaching and Learning Quotes</h2>
+									<p><q>I would build a bear cave where any bear can receive fishies and hunny at any time of day.</q></p>
+									<cite>The Big Red Bear</cite>
+								</div>
+								<div class="contact flex">
+									<div class="contact-button"><a href="#" class="contact-us">Contact Us</a></div>
+									<ul class="list-menu divs">
+										<li><a class="link-email" href="mailto:cornellcti@cornell.edu">cornellcti@cornell.edu</a></li>
+										<li><a class="link-phone" href="tel:+1-607-255-7224">607-255-7224</a></li>
+									</ul>
+								</div>
+							</div -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </div>
+
+    <div id="main-content" class="band">
+        <main id="main" class="container-fluid aria-target" tabindex="-1">
+
+            <div class="row">
+                <div class="secondary">
+
+                    <div class="showcase">
+                        <h2 class="h1">Innovation <em>Showcase</em></h2>
+                        <div class="view cwd-component cwd-card-grid three-card teaser">
+                            <div class="view-content cards">
+                                <div class="views-row card">
+
+                                    <div class="node">
+
+                                        <a href="#">
+                                            <div class="group-image field-group field-group-html-element">
+                                                <div class="field field-name-field-image">
+                                                    <img src="images/cti/UP_2016_1375_035_select.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="group-fields field-group field-group-html-element">
+                                                <div class="field field-name-category category">
+                                                    Video
+                                                </div>
+                                                <div class="field field-name-title title">
+                                                    <h3 class="sans">Linked Article Title Which is Often Long Enough to
+                                                        Wrap to a Second Line</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="views-row card">
+                                    <div class="node">
+
+                                        <a href="#">
+                                            <div class="group-image field-group field-group-html-element">
+                                                <div class="field field-name-field-image">
+                                                    <img src="images/cti/UP_2017_1522_002_select.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="group-fields field-group field-group-html-element">
+                                                <div class="field field-name-category category">
+                                                    Photo
+                                                </div>
+                                                <div class="field field-name-title title">
+                                                    <h3 class="sans">External Article Link</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                                <div class="views-row card">
+                                    <div class="node">
+                                        <a href="#">
+                                            <div class="group-image field-group field-group-html-element">
+                                                <div class="field field-name-field-image">
+                                                    <img src="images/cti/UP_2016_1503_006_select.jpg" alt="">
+                                                </div>
+                                            </div>
+                                            <div class="group-fields field-group field-group-html-element">
+                                                <div class="field field-name-category category">
+                                                    Event
+                                                </div>
+                                                <div class="field field-name-title title">
+                                                    <h3 class="sans">Linked Article Title Which is Often Long Enough to
+                                                        Wrap to a Second Line</h3>
+                                                </div>
+                                            </div>
+                                        </a>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <!--			
+<article id="main-article" class="primary impact">		
+				
+					<section>
+						
+						<p class="intro">Perhaps this section should be omitted from the homepage?</p>
+						<p>Otherwise, it could result in an empty ARTICLE tag.</p>
+
+					</section>
+
+				</article>
+
+<div id="sidebar-bottom" class="secondary" role="complementary">
+					content
+                </div>
+            -->
+
+            </div>
+
+        </main>
+    </div>
+
+    <div class="band sidebar sidebar-right home-supplement" role="complementary" id="home-events">
+        <div class="container-fluid">
+            <div id='terms_of_use row'>
+                <h2 class='h1'>Terms of <em>Use</em></h2>
+            </div>
+            <div class="row">
+                <div class='col-sm-4'>
+                    <h3>Academic Integrity</h3>
+                </div>
+
+                <div class='col'>
+                    <p class='child'>
+                        Course materials posted on Canvas are intellectual property belonging to the author.
+                        Students are not permitted to buy or sell any course materials without the express
+                        permission of the instructor. Such unauthorized behavior constitutes academic
+                        misconduct.
+                        <a href='http://cuinfo.cornell.edu/aic.cfm'>Code of Academic Integrity</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class='col-sm-4'>
+                    <h3>Report Student Academic Concerns</h3>
+                </div>
+                <div class='col'>
+                    <p class='child'>
+                        Please <a href=' https://data.arts.cornell.edu/faculty/sit/st_entrysearch.cfm'>inform</a>
+                        your college about any students for whom you have academic concerns.
+                    </p>
+
+                    <div class='para'>
+                        <h4>Policies & Guidelines</h4>
+
+                        <ul>
+                            <li><a href='https://www.dfa.cornell.edu/sites/default/files/policy/vol4_15.pdf'>Faculty
+                                    Guide to Copyright</a></li>
+                            <li><a href='http://registrar.sas.cornell.edu/Faculty/studentinfo.html'>Use of Student
+                                    Data
+                                    Guidelines</a></li>
+                            <li><a href='#'>FERPA and Teaching with Technology</a></li>
+                            <li><a href='https://it.cornell.edu/regulated-data-chart'>Guidelines for Using Campus
+                                    IT
+                                    Services with Regulated Data</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class='col-sm-4'>
+                    <h3>Security Notice</h3>
+                </div>
+                <div class='col'>
+                    <p class='child'>
+                        To make sure that no one can connect to Canvas using your account, you must Logout from
+                        Canvas and Exit/Quit the browser application. Clearing Your
+                        <a href='http://www.cit.cornell.edu/services/identity/cuweblogin/more.html'>CUWebLogin
+                            Credentials</a>
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class='col-sm-4'>
+                    <h3>FERPA / GDPR</h3>
+                </div>
+                <div class='col'>
+                    <p class='child'>ligula, eu ullamcorper odio libero at ante. Vestibulum et elit ac massa
+                        bibendum blandit. Integer dignissim sapien nec orci vulputate, in venenatis
+                        metus aliquet.
+                    </p>
+                    <p class='child'>Suspendisse placerat leo vel posuere bibendum. Nunc sagittis velit sit amet
+                        velit finibus molestie.dimentum elementum vel sit amet neque. Sed consequat elit ante,
+                        id maximus urna facilisis a. Vivamus quis dolor tempor lorem ornare faucibus.
+                        Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis
+                        egestas. Sed nibh nisl, mattis nec ante nec, rutrum molestie ante. Maecenas ut
+                        pellentesque risus.
+                    </p>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- div class="band sidebar sidebar-right accent1 home-supplement" role="complementary" id="home-social">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="primary">
+                    <h2 class="h1"><span class="main-heading-text">The Teach Better Blog</span> <small class="sans">by
+                            Doug McKee</small></h2>
+
+                    <div class="view cwd-component cwd-component-rows">
+                        <div class="view-content cards">
+                            <div class="views-row card">
+
+                                <div class="node">
+
+                                    <div class="group-image field-group field-group-html-element">
+                                        <div class="field field-name-field-image">
+                                            <a href="#"><img src="images/photos/bigredsquare480.jpg" width="480" height="480"
+                                                    alt=""></a>
+                                        </div>
+                                    </div>
+                                    <div class="group-fields field-group field-group-html-element">
+
+                                        <div class="field field-name-title title">
+                                            <h3><a href="#">Linked Article Title Which is Often Long Enough to Wrap to
+                                                    a Second Line</a></h3>
+                                        </div>
+                                        <div class="field field-name-post-date date">
+                                            April 13, 2017
+                                        </div>
+                                        <div class="field field-name-summary summary">
+                                            <p>Summary text is simply scaled down to be more compact, though it's
+                                                possible that it could include paragraphs and WYSIWYG formatting from
+                                                Drupal. The recommended summary length for this display is ~220
+                                                characters...</p>
+                                        </div>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="secondary">
+                    <div class="twitter">
+                        <h2 class="h4"><a href="https://www.twitter.com/Cornell_CTI"><span class="fa fa-twitter"></span><br>@Cornell_CTI</a></h2>
+
+                        
+                        <div class="tweet">
+                            <p>The Wicked Witch's crystal ball is up and running @CornellRMC! If you plan to <a href="http://www.twitter.com/search?q=%23BringAChildtoWork&amp;src=hash">#BringAChildtoWork</a>
+                                tomorrow, stop by… <a href="https://t.co/ziXOawKHat">https://t.co/ziXOawKHat</a> </p>
+                            <time datetime="2018-Apr-25T19:07Z" title="2018-Apr-25T19:07Z" class="timeago"></time>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div -->
+
+    </div>
+
+    <footer>
+        <div class="main-footer">
+            <div class="container-fluid sidebar-left">
+                <div class="row">
+                    <div class="secondary float-left justify-content">
+                        <h2 class="h4">Center for Teaching Innovation</h2>
+                        <p>235 Garden Ave<br>Cornell University<br>Ithaca, NY 14853-6601</p>
+                        <p><a class="link-block" href="#">Contact Us</a></p>
+                    </div>
+                    <div class="primary">
+                        <div>
+                            <h3 class="h6">Additional Resources
+                            </h3>
+                            <ul class="list-menu vertical">
+                                <li>If you have a disability and are having trouble accessing information on this
+                                    website or need materials in an alternate format, Contact
+                                    <a href="mailto:web-accessibility@cornell.edu">web-accessibility@cornell.edu</a>
+                                    for assistance.
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        </div>
+        <div class="sub-footer">
+            <div class="container-fluid sidebar-left">
+                <div class="row">
+                    <div class="secondary">
+                        <a href="https://www.cornell.edu">Cornell University</a> &copy;2018
+                    </div>
+                    <!--div class="primary" >
+                        <ul class="list-menu">
+                            <li><a href="mailto:web-accessibility@cornell.edu">Web Accessibility Help</a></li>
+                        </ul>
+                    </div -->
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- jQuery and Contrib Components -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="js/contrib/modernizr.js"></script>
+
+    <!-- CWD Components -->
+    <script src="js/cwd.js"></script>
+    <script src="js/cwd_utilities.js"></script>
+    <script src="js/cwd_slider.js"></script>
+    <script src="js/cti.js"></script>
+
+    <script>
+        if (image_array1 == undefined) {
+            // [file path, headline, caption, link, alt] -- alt text is not actually needed as long as the slide has a headline
+            var image_array1 = [['images/slider/bigredbear.jpg', 'Headline Text for Slide One Adipiscing Ligula Aenean Justo Beglam Erisat', '', 'http://www.cornell.edu', ''],
+            ['images/slider/campus.jpg', 'Second Slide\'s Headline', '', 'http://www.cornell.edu', ''],
+            ['images/slider/campus2.jpg', 'The Third Headline', '', 'http://www.cornell.edu', '']];
+        }
+        cwd_slider('#home-header', '#slider-caption', 8, 1, false, false);
+    </script>
+
+</body>
+
+</html>

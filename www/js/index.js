@@ -15,7 +15,7 @@
 (function ($) {
     'use strict';
     //define debug variables
-    var USE_CTI_RSS = true;
+    var USE_CTI_RSS = false;
     var DEBUG = false;
     //jQuery FadeIn speed of targets
     var FADEINSPEED = 200;
