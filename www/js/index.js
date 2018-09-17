@@ -82,8 +82,7 @@
     };
 
    /**
-    * @description Fetch xml and render content in:
-    *               Announcements/Spotlight, Notifications
+    * @description Fetch xml and render content in: Announcements/Spotlight, Notifications
     * @param {object} spotlightService 
     * @param {Object} notificationService 
     * @access settings domTarget
