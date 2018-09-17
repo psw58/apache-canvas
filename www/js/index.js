@@ -26,43 +26,39 @@
         "$spotlightTarget" : '#spotlight',
          "$notificationTarget" : '#notification'
     }
-
     //The notification field labels used on the cti site this is needed to map content from CTI to 
     var NotificationLabels = {
         "message":"Message",
         "color":"Select color option"
     };
-
     //should this come from CTI?
     var spotlightContent = {
         "title": "Announcements",
         "maxlength": 3
     };
-
     //rss CTI feeds
     var rssSpotlight = "https://canvas-ctiteach.pantheonsite.io/showcase/rss.xml";
     var rssNotification = 'https://canvas-ctiteach.pantheonsite.io/notification/rss.xml';
-
     //local RSS feeds edit these feeds for local development
     var localSpotlight = "./imports/spotlightdata.xml";
     var localNotification = './imports/notificationdata.xml';
-
     //back up data incase ajax request fails
     var buSpotlightData = [{"link":"https://teaching.cornell.edu/","title":"Canvas at Cornell","thumbnail":"./images/Spotlight Image 2 canvas_0.jpg","alt":"The logo for the Learning Mangement System Canvas"}];
     var buNotificationData = [{"message":"Notification: Welcome to Canvas, Make sure to review the Canvas terms of use","selected_color_option":"6"}];
 
+    //determine wich data to render, then call functions to fetch it and render it
     switch(true){
         case settings.dataSource.canvas_XML:
             //use xml data stored on this server
             var rssSpotlightService = new RssSpotlightService( localSpotlight );
             var rssNotificationService = new RssNotificationService( localNotification, NotificationLabels );
-            fetchRender(rssSpotlightService, rssNotificationService);
+            fetchRender(rssSpotlightService, rssNotificationService, settings);
             break;
         case settings.dataSource.CTI_RSS:
             //use RSS feed from CTI 
             var rssSpotlightService = new RssSpotlightService( rssSpotlight );
             var rssNotificationService = new RssNotificationService( rssNotification, NotificationLabels );
-            fetchRender(rssSpotlightService, rssNotificationService);
+            fetchRender(rssSpotlightService, rssNotificationService, settings);
             break;
         case settings.dataSource.JS_OBJ:
             //use local data obj
@@ -81,19 +77,19 @@
 
     };
 
-   /**
-    * @description Fetch xml and render content in: Announcements/Spotlight, Notifications
+    /**
+    * @description helper function Fetch xml and render content in: Announcements/Spotlight, Notifications
     * @param {object} spotlightService 
     * @param {Object} notificationService 
     * @access settings domTarget
     */
-    function fetchRender( spotlightService, notificationService){
+    function fetchRender( spotlightService, notificationService, appSettings){
         spotlightService.init()
             .done(
                 function(data){
                     if (data && data.length){
                         var view = new SpotlightView(data, spotlightContent);
-                        $(settings.domtargets.$spotlightTarget).html( view.render().$el );   
+                        $(appSettings.domtargets.$spotlightTarget).html( view.render().$el );   
                     }
                 }
             )
@@ -113,7 +109,7 @@
                     if (data && data.length){
                         var message = data[0];//assume there is only one element
                         var notificationView = new NotificationView(message);
-                        $(settings.domtargets.$notificationTarget).html( notificationView.render().$el );       
+                        $(appSettings.domtargets.$notificationTarget).html( notificationView.render().$el );       
                     }
                 }
             )
@@ -124,6 +120,5 @@
                 }
             )
     }
-
-
+    
 })(jQuery);
