@@ -8,7 +8,8 @@
     <title>Template - Cornell CSS Framework</title>
 
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,400i,600,700,700i|Lato:300,400" rel="stylesheet">
-
+    <link rel="stylesheet" href="//use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+        crossorigin="anonymous">
     <link href="fonts/font-awesome.min.css" rel="stylesheet">
     <link href="fonts/material-design-iconic-font.min.css" rel="stylesheet">
     <link href="fonts/cornell-custom.css" rel="stylesheet">
@@ -27,8 +28,8 @@
         #site-header div.primary {
             display: flex;
             background: #cce0e6;
-            margin-bottom: 4em;
-            padding: 20px;
+            margin-bottom: 0;
+            padding: 2em;
         }
 
         #site-header>div>div>div>div>div.primary>div:nth-child(1) {
@@ -69,90 +70,106 @@
             border-bottom: solid 1px #ddd;
         }
 
-/* beginning of import */
-em{
-    color: #b31b1b;
-} 
+        /* beginning of import */
+        em {
+            color: #b31b1b;
+        }
 
-#home-events h2 {
-    margin-bottom: 0em;
-}
-#site-header > div > div.container-fluid > div{
-    margin-bottom: 20px;
-}
+        #home-events h2 {
+            margin-bottom: 0em;
+        }
 
-.flex{
-    display: flex;
+        #site-header>div>div.container-fluid>div {
+            margin-bottom: 20px;
+        }
 
-}
+        .flex {
+            display: flex;
 
-#notification > div{
-    margin-bottom: 10px;
-}
+        }
 
-.showcase h3{
-        font-size: 14px;
-        font-weight: 500;
-        line-height: 1.4;
-}
+        #notification>div {
+            margin-bottom: 10px;
+        }
 
-div.card  div.node{
-    border-bottom: 1px solid #ebebeb;
-    padding-bottom: 1em;
-    /*psw changed from 3em */
-}
+        .showcase h3 {
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 1.4;
+        }
 
-div.spotlight  div.card {
-    -moz-box-shadow: none;
-    -webkit-box-shadow: none;
-    box-shadow: none;
-    padding-bottom: 5px;
-    margin-bottom: 5px;
-    border-bottom: 3px solid #b31b1b;
-}
+        div.card div.node {
+            border-bottom: 1px solid #ebebeb;
+            padding-bottom: 1em;
+            /*psw changed from 3em */
+        }
 
-#main-article > section > div.primary{
-    background: #cce0e6;
-    text-align: center;
-    padding: 30px;
-    /*padding-left: 50px;*/
-    background-size: contain;                  
-    /*background-image: url('./images/cti/canvas transparentlogo3.png');*/
-    background-repeat:   no-repeat;
-    background-position: -200px; 
-    /* changed psw bottom margin */      
-    margin-bottom: 4em;       
-}
+        div.spotlight div.card {
+            -moz-box-shadow: none;
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            padding-bottom: 5px;
+            margin-bottom: 5px;
+            border-bottom: 3px solid #b31b1b;
+        }
 
-a.link-button{
-    font-size: 24px;
-    padding: 0.5em 1em;
-    min-width: 191px;
-} 
-a.link-button:active, a.link-button:hover, a.link-button:focus{
-    background: #315163;
-    color:#fff;
-}	
+        #main-article>section>div.primary {
+            background: #cce0e6;
+            text-align: center;
+            padding: 30px;
+            /*padding-left: 50px;*/
+            background-size: contain;
+            /*background-image: url('./images/cti/canvas transparentlogo3.png');*/
+            background-repeat: no-repeat;
+            background-position: -200px;
+            /* changed psw bottom margin */
+            margin-bottom: 4em;
+        }
 
-.quote p {
-    text-indent: 0em;
-}
+        a.link-button {
+            font-size: 24px;
+            padding: 0.5em 1em;
+            min-width: 191px;
+        }
 
-@media (max-width: 768px){
-    .mobile-hidden{
-        display:none;
-    }   
-} 
+        a.link-button:active,
+        a.link-button:hover,
+        a.link-button:focus {
+            background: #315163;
+            color: #fff;
+        }
 
-#notification i  {
-    padding-right: 5px;
-    font-size: 1.2em;
-}
-.content-block {
-    margin: 0px 0 0em !important;
-}     
+        ul.sub-menu{
+            margin-bottom: 1em;
+        }
 
-/* end of import */
+        .quote p {
+            text-indent: 0em;
+        }
+
+        @media (max-width: 768px) {
+            .mobile-hidden {
+                display: none;
+            }
+        }
+
+        #notification i {
+            padding-right: 5px;
+            font-size: 1.2em;
+        }
+
+        .content-block {
+            margin: 0px 0 0em !important;
+        }
+
+        p.btn-list {
+            margin-bottom: 2.5em;
+        }
+        .log-in{
+            border-right: 2px solid rgba(179, 27, 27, 0.4);
+        }
+
+        /* end of import */
 
         @media (min-width: 768px) {
             #sidebar-top {
@@ -177,6 +194,10 @@ a.link-button:active, a.link-button:hover, a.link-button:focus{
                 padding-left: 3em;
             }
         }
+
+        .cr-notification{
+            padding-left: 2em;
+        }
     </style>
     <!--[if lt IE 9]>
 	<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
@@ -196,7 +217,7 @@ a.link-button:active, a.link-button:hover, a.link-button:focus{
                 <h1 class="cu-logo"><a href="http://www.cornell.edu"><img class="sr-only" src="images/cornell/bold_cornell_logo_simple_b31b1b.svg"
                             alt="Cornell University" width="245" height="62"></a></h1>
                 <div class="cu-unit">
-                    <h2><a href="/">Center for Teaching Innovation</a></h2>
+                    <h2><a href="/">Welcome to Canvas at Cornell University</a></h2>
                 </div>
                 <div class="buttons">
                     <nav id="utility-navigation" aria-label="Supplementary Navigation">
@@ -207,6 +228,17 @@ a.link-button:active, a.link-button:hover, a.link-button:focus{
                     </nav>
                 </div>
             </div>
+            <div class="flex">
+                <div id="notification" class="container-fluid">
+                    <div>
+                        <div class="panel accent-green fill">
+                            <p><i class="fas fa-exclamation-triangle exclamation-triangle"></i> Notification.
+                                This bar can provide users with additional information, and changes background color,
+                                with seven different color options.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </header>
 
         <header id="site-header">
@@ -215,21 +247,21 @@ a.link-button:active, a.link-button:hover, a.link-button:focus{
                     <div class="container-fluid sidebar sidebar-right">
                         <div class="row">
                             <div class="primary">
-                                <div>
+                                <div class='log-in'>
                                     <h2 class='h1'>Log Into <em>Canvas</em></h2>
-                                    <p>
+                                    <p class='btn-list'>
                                         <a class='link-button' href='https://cornell.instructure.com/login/saml/1'>Cornell
                                             NetID</a>
                                     </p>
-                                    <p>
+                                    <p class='btn-list'>
                                         <a class='link-button' href='https://cornell.instructure.com/login/saml/2'>Weill
                                             ID</a>
                                     </p>
-                                    <p>
+                                    <p class='btn-list'>
                                         <a class='link-button' href='https://cornell.instructure.com/login/canvas'>Guest</a>
                                     </p>
                                 </div>
-                                <div>
+                                <div class='cr-notification'>
                                     <h3>Cornell University Copyright Notification</h3>
                                     <p>The University expects that users of these services will in good faith post
                                         material in compliance with copyright laws. If you have questions about the use
@@ -245,27 +277,30 @@ a.link-button:active, a.link-button:hover, a.link-button:focus{
                             </div>
 
                             <div id="sidebar-top" class="secondary">
-                                <h2 class='mobile-hidden'>Help & Support links</h2>
+                                <h2 class='mobile-hidden h1'>Help & Support <em>Links</em></h2>
                                 <nav class="secondary-navigation mobile-expander" aria-label="Section Navigation">
                                     <div class="">
                                         <ul class="menu">
                                             <li class="current-menu-ancestor current-menu-parent">
                                                 <ul class="sub-menu">
-                                                    <li class="menu-item"><a href="https://community.canvaslms.com/community/answers/guides/">Search
+                                                    <li class="menu-item menu-item--collapsed"><a href="https://community.canvaslms.com/community/answers/guides/">Search
                                                             the Canvas Guides</a></li>
-                                                    <li class="menu-item"><a href="mailto:support@instructure.com">Support</a></li>
-                                                    <li class="menu-item"><a href="https://teaching.cornell.edu/">Center
+                                                    <li class="menu-item menu-item--collapsed"><a href="mailto:support@instructure.com">Support</a></li>
+                                                    <li class="menu-item menu-item--collapsed"><a href="https://teaching.cornell.edu/">Center
                                                             for
                                                             Teaching Innovation</a></li>
-                                                    <li class="menu-item"><a href="https://it.cornell.edu/canvas/">Blackboard
+                                                    <li class="menu-item menu-item--collapsed"><a href="https://it.cornell.edu/canvas/">Blackboard
                                                             to
                                                             Canvas Migration </a></li>
-                                                    <li class="menu-item"><a href="https://www.instructure.com/">About
+                                                    <li class="menu-item menu-item--collapsed"><a href="https://www.instructure.com/">About
                                                             Canvas</a>
                                                     </li>
                                                 </ul>
                                             </li>
                                         </ul>
+                                    </div>
+                                    <div class="content-block">
+                                        <a href="mailto:canvas@cornell.edu" class="contact-us light">Contact Us</a>
                                     </div>
                                 </nav>
                             </div>
@@ -540,7 +575,7 @@ a.link-button:active, a.link-button:hover, a.link-button:focus{
             <div class="container-fluid sidebar-left">
                 <div class="row">
                     <div class="secondary float-left justify-content">
-                        <h2 class="h4">Center for Teaching Innovation</h2>
+                        <h2 class="h4">Canvas at Cornell</h2>
                         <p>235 Garden Ave<br>Cornell University<br>Ithaca, NY 14853-6601</p>
                         <p><a class="link-block" href="#">Contact Us</a></p>
                     </div>
