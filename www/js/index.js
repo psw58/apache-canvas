@@ -15,6 +15,11 @@
 (function ($) {
     'use strict';
     //define debug variables
+    var settings = {};
+    settings.dataSource.JS_OBJ = false;
+    settings.dataSource.canvas_XML = false;
+    settings.dataSource.CTI_RSS = true;
+
     var USE_CTI_RSS = true;
     var DEBUG = false;
     //jQuery FadeIn speed of targets
