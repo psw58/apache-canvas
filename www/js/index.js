@@ -14,16 +14,18 @@
  */
 (function ($) {
     'use strict';
-    //define debug variables
+    //define variables
     var settings = {};
+    settings.dataSource = {};
+    //set the data source location
     settings.dataSource.JS_OBJ = false;
     settings.dataSource.canvas_XML = false;
     settings.dataSource.CTI_RSS = true;
-
-    var USE_CTI_RSS = true;
-    var DEBUG = false;
-    //jQuery FadeIn speed of targets
-    var FADEINSPEED = 200;
+    //render dom targets defined in index.html
+    settings.domtargets = {
+        "$spotlightTarget" : '#spotlight',
+         "$notificationTarget" : '#notification'
+    }
 
     //The notification field labels used on the cti site this is needed to map content from CTI to 
     var NotificationLabels = {
@@ -37,10 +39,6 @@
         "maxlength": 3
     };
 
-    //targets
-    var spotlightTarget = '#spotlight';
-    var notificationTarget = '#notification';
-
     //rss CTI feeds
     var rssSpotlight = "https://canvas-ctiteach.pantheonsite.io/showcase/rss.xml";
     var rssNotification = 'https://canvas-ctiteach.pantheonsite.io/notification/rss.xml';
@@ -53,71 +51,80 @@
     var buSpotlightData = [{"link":"https://teaching.cornell.edu/","title":"Canvas at Cornell","thumbnail":"./images/Spotlight Image 2 canvas_0.jpg","alt":"The logo for the Learning Mangement System Canvas"}];
     var buNotificationData = [{"message":"Notification: Welcome to Canvas, Make sure to review the Canvas terms of use","selected_color_option":"6"}];
 
-    if (USE_CTI_RSS){
-        //use RSS feed from CTI 
-        var rssSpotlightService = new RssSpotlightService( rssSpotlight );
-        var rssNotificationService = new RssNotificationService( rssNotification, NotificationLabels );
-    }else{
-        //use xml data stored on this server
-        var rssSpotlightService = new RssSpotlightService( localSpotlight );
-        var rssNotificationService = new RssNotificationService( localNotification, NotificationLabels );
-    }
+    switch(true){
+        case settings.dataSource.canvas_XML:
+            //use xml data stored on this server
+            var rssSpotlightService = new RssSpotlightService( localSpotlight );
+            var rssNotificationService = new RssNotificationService( localNotification, NotificationLabels );
+            fetchRender(rssSpotlightService, rssNotificationService);
+            break;
+        case settings.dataSource.CTI_RSS:
+            //use RSS feed from CTI 
+            var rssSpotlightService = new RssSpotlightService( rssSpotlight );
+            var rssNotificationService = new RssNotificationService( rssNotification, NotificationLabels );
+            fetchRender(rssSpotlightService, rssNotificationService);
+            break;
+        case settings.dataSource.JS_OBJ:
+            //use local data obj
+            if (buSpotlightData && buSpotlightData.length){
+                var view1 = new SpotlightView(buSpotlightData, spotlightContent);
+                $(settings.domtargets.$spotlightTarget).html( view1.render().$el );   
+            }
+    
+            if (buNotificationData && buNotificationData.length){
+                var view2 = new NotificationView(buNotificationData[0], spotlightContent);
+                $(settings.domtargets.$notificationTarget).html( view2.render().$el ); 
+            }
+            break;            
+        default:
+            console.warn("WARNING: No source selected");
 
-    /* 
-    *  Fetch xml and render content in:
-    *   Announcements/Spotlight,
-    *   Notifications
-    * */
-    if ( !DEBUG ){
-        rssSpotlightService.init()
+    };
+
+   /**
+    * @description Fetch xml and render content in:
+    *               Announcements/Spotlight, Notifications
+    * @param {object} spotlightService 
+    * @param {Object} notificationService 
+    * @access settings domTarget
+    */
+    function fetchRender( spotlightService, notificationService){
+        spotlightService.init()
             .done(
                 function(data){
                     if (data && data.length){
                         var view = new SpotlightView(data, spotlightContent);
-                        $(spotlightTarget).html( view.render().$el );   
+                        $(settings.domtargets.$spotlightTarget).html( view.render().$el );   
                     }
                 }
             )
             .fail( 
+                //if failed default to nothing
                 function(){
-                    console.log('XML parse spotlight failed using back up');
-                    var view = new SpotlightView(buSpotlightData, spotlightContent);
-                    $(spotlightTarget).html( view.render().$el );   
+                    console.log('XML parse spotlight failed');  
                 }
             )    
         /*
         * initialize notification and parse RSS fed from CTI
         * this requires notification view to be implimented 
         */
-        rssNotificationService.init()
+        notificationService.init()
             .done(
                 function(data){
                     if (data && data.length){
                         var message = data[0];//assume there is only one element
                         var notificationView = new NotificationView(message);
-                        $(notificationTarget).html( notificationView.render().$el );       
+                        $(settings.domtargets.$notificationTarget).html( notificationView.render().$el );       
                     }
                 }
             )
             .fail( 
                 function(){
-                    console.log('XML parse notification failed using back up');
-                    var view = new NotificationView(buNotificationData[0], spotlightContent);
-                    $(notificationTarget).html( view.render().$el );   
+                    //if fails default to nothing
+                    console.log('XML parse notification failed');
                 }
             )
     }
-    else{
-        //debug is enabled
-        if (buSpotlightData && buSpotlightData.length){
-            var view1 = new SpotlightView(buSpotlightData, spotlightContent);
-            $(spotlightTarget).html( view1.render().$el );   
-        }
 
-        if (buNotificationData && buNotificationData.length){
-            var view2 = new NotificationView(buNotificationData[0], spotlightContent);
-            $(notificationTarget).html( view2.render().$el ); 
-        }
-    }
 
 })(jQuery);
