@@ -16,7 +16,7 @@
     'use strict';
     //define variables
     const settings = {
-        //the data source location
+        //the data source location EDIT this to change data source location
         dataSource: {
             "JS_OBJ" : false,
             "canvas_XML" : false,
@@ -49,9 +49,6 @@
         buNotificationData : [{"message":"Notification: Welcome to Canvas, Make sure to review the Canvas terms of use","selected_color_option":"6"}]
             
     };
-
-
-
 
     //determine wich data to render, then call functions to fetch it and render it
     switch(true){
