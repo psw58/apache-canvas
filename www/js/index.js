@@ -83,8 +83,9 @@
 
     /**
     * @description helper function Fetch xml and render content in: Announcements/Spotlight, Notifications
-    * @param {object} spotlightService 
-    * @param {Object} notificationService 
+    * @param {RssSpotlightService} spotlightService 
+    * @param {RssNotificationService} notificationService 
+    * @param {settings.domtargets} appSettings
     * @access settings domTarget
     */
     function fetchRender(spotlightService, notificationService, appSettings) {
