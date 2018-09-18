@@ -7,8 +7,6 @@
  * @summary MS ie11 does not support xml documents but does support text documents
  *          The loader checks to see if microsoft ie and then request as a text document
  *          Tested with ie9 and above
- *          https://stackoverflow.com/questions/17035794/how-to-read-xml-data-in-ie-browser-using-jquery-ajax-function#
- *          https://stackoverflow.com/questions/19999388/check-if-user-is-using-ie-with-jquery
  */
 var RssSpotlightService = function (url) {
     'use strict';
@@ -177,7 +175,7 @@ var RssNotificationService = function (url, NotificationLabels) {
 function msieversion() {
     var ua = window.navigator.userAgent;
     var msie = ua.indexOf("MSIE ");
-    // If Internet Explorer, return version number
+    // If Internet Explorer, return true
     if (msie > 0 || !!navigator.userAgent.match(/Trident.*rv\:11\./)) {
         return true;
     }
