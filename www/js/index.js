@@ -3,6 +3,7 @@
  * @author psw58@cornell.edu
  * @version 0.5 release Alpha
  * @description initialize the app
+ * @repo https://github.com/psw58/canvas-login
  * @summary
  *  - uses anonymous self-invoking function to not pollute namespace
  *  - Fetches service data -> get view object -> render it as html in target
