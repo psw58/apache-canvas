@@ -1,54 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://psw-ctiteach.pantheonsite.io/showcase/rss.xml">
+<rss xmlns:dc="http://purl.org/dc/elements/1.1/" version="2.0" xml:base="https://canvas-ctiteach.pantheonsite.io/showcase/rss.xml">
   <channel>
     <title>Innovation Showcase</title>
-    <link>https://psw-ctiteach.pantheonsite.io/showcase/rss.xml</link>
+    <link>https://canvas-ctiteach.pantheonsite.io/showcase/rss.xml</link>
     <description/>
     <language>en</language>
     
-<item>
-  <title>Cornell to Replace Blackboard with Canvas for All Courses beginning 2019</title>
-  <link>https://psw-ctiteach.pantheonsite.io/spotlights/cornell-replace-blackboard-canvas-all-courses-beginning-2019</link>
-  <description>Cornell to Replace Blackboard with Canvas for All Courses beginning 2019&lt;span data-quickedit-field-id="node/281/uid/en/rss"&gt;&lt;a title="View user profile." href="https://psw-ctiteach.pantheonsite.io/user/1"&gt;ctiadmin&lt;/a&gt;&lt;/span&gt;
-&lt;span data-quickedit-field-id="node/281/created/en/rss"&gt;Thu, 08/02/2018 - 04:07&lt;/span&gt;
+    <item>
+  <title>Information on the latest new features and changes to Canvas </title>
+  <link>https://canvas-ctiteach.pantheonsite.io/spotlights/information-latest-new-features-and-changes-canvas</link>
+  <description>Information on the latest new features and changes to Canvas &lt;span data-quickedit-field-id="node/281/uid/en/rss"&gt;&lt;a title="View user profile." href="https://canvas-ctiteach.pantheonsite.io/user/1"&gt;ctiadmin&lt;/a&gt;&lt;/span&gt;
+&lt;span data-quickedit-field-id="node/281/created/en/rss"&gt;Wed, 09/19/2018 - 04:07&lt;/span&gt;
 
             &lt;div data-quickedit-field-id="node/281/field_link_single/en/rss"&gt;https://it.cornell.edu/canvas&lt;/div&gt;
       
             &lt;div data-quickedit-field-id="node/281/field_media_image/en/rss"&gt;&lt;article data-quickedit-entity-id="media/67" class="contextual-region"&gt;&lt;div data-contextual-id="media:media=67:changed=1534342968&amp;langcode=en"&gt;&lt;/div&gt;
       
-            &lt;div data-quickedit-field-id="media/67/field_media_image_1/en/default"&gt;  &lt;img src="https://psw-ctiteach.pantheonsite.io/sites/default/files/2018-08/Spotlight%20Image%202%20canvas_0.jpg" width="900" height="600" alt="The logo for the Learning Mangement System Canvas" /&gt;&lt;/div&gt;
+            &lt;div data-quickedit-field-id="media/67/field_media_image_1/en/default"&gt;  &lt;img src="https://canvas-ctiteach.pantheonsite.io/sites/default/files/2018-08/Spotlight%20Image%202%20canvas_0.jpg" width="900" height="600" alt="The logo for the Learning Mangement System Canvas" /&gt;&lt;/div&gt;
       
   &lt;/article&gt;&lt;/div&gt;
       
       &lt;div data-quickedit-field-id="node/281/field_tags/en/rss"&gt;
+              &lt;div&gt;Canvas Login&lt;/div&gt;
               &lt;div&gt;Diversity&lt;/div&gt;
           &lt;/div&gt;
   
-            &lt;div data-quickedit-field-id="node/281/field_plain_type/en/rss"&gt;News&lt;/div&gt;
+            &lt;div data-quickedit-field-id="node/281/field_plain_type/en/rss"&gt;Learning Canvas&lt;/div&gt;
       </description>
-  <pubDate>Thu, 02 Aug 2018 08:07:28 +0000</pubDate>
+  <pubDate>Wed, 19 Sep 2018 08:07:28 +0000</pubDate>
     <dc:creator>ctiadmin</dc:creator>
-    <guid isPermaLink="false">281 at https://psw-ctiteach.pantheonsite.io</guid>
+    <guid isPermaLink="false">281 at https://canvas-ctiteach.pantheonsite.io</guid>
     </item>
 <item>
-  <title>Innovative Teaching and Learning Awards 2018</title>
-  <link>https://psw-ctiteach.pantheonsite.io/spotlights/innovative-teaching-and-learning-awards-2018</link>
-  <description>Innovative Teaching and Learning Awards 2018&lt;span data-quickedit-field-id="node/282/uid/en/rss"&gt;&lt;a title="View user profile." href="https://psw-ctiteach.pantheonsite.io/user/1"&gt;ctiadmin&lt;/a&gt;&lt;/span&gt;
-&lt;span data-quickedit-field-id="node/282/created/en/rss"&gt;Thu, 08/02/2018 - 04:07&lt;/span&gt;
+  <title>Marianella Casasola describes why she is excited about Canvas </title>
+  <link>https://canvas-ctiteach.pantheonsite.io/spotlights/marianella-casasola-describes-why-she-excited-about-canvas</link>
+  <description>Marianella Casasola describes why she is excited about Canvas &lt;span data-quickedit-field-id="node/280/uid/en/rss"&gt;&lt;a title="View user profile." href="https://canvas-ctiteach.pantheonsite.io/user/1"&gt;ctiadmin&lt;/a&gt;&lt;/span&gt;
+&lt;span data-quickedit-field-id="node/280/created/en/rss"&gt;Sun, 09/16/2018 - 04:07&lt;/span&gt;
 
-            &lt;div data-quickedit-field-id="node/282/field_link_single/en/rss"&gt;/innovation&lt;/div&gt;
+            &lt;div data-quickedit-field-id="node/280/field_link_single/en/rss"&gt;https://www.youtube.com/watch?feature=youtu.be&amp;v=UJt6AVWT_GI&lt;/div&gt;
       
-            &lt;div data-quickedit-field-id="node/282/field_media_image/en/rss"&gt;&lt;article data-quickedit-entity-id="media/57" class="contextual-region"&gt;&lt;div data-contextual-id="media:media=57:changed=1534361141&amp;langcode=en"&gt;&lt;/div&gt;
+            &lt;div data-quickedit-field-id="node/280/field_media_image/en/rss"&gt;&lt;article data-quickedit-entity-id="media/16" class="contextual-region"&gt;&lt;div data-contextual-id="media:media=16:changed=1536685791&amp;langcode=en"&gt;&lt;/div&gt;
       
-            &lt;div data-quickedit-field-id="media/57/field_media_image_1/en/default"&gt;  &lt;img src="https://psw-ctiteach.pantheonsite.io/sites/default/files/2018-08/Spotlight%20Image-%20Innovation%20Awards.jpg" width="900" height="600" alt="A group of five students placing notes on a glass surface" /&gt;&lt;/div&gt;
+            &lt;div data-quickedit-field-id="media/16/field_media_image_1/en/default"&gt;  &lt;img src="https://canvas-ctiteach.pantheonsite.io/sites/default/files/2018-07/Institute%20Image%201.jpg" width="900" height="600" alt="Faculty at an institute" /&gt;&lt;/div&gt;
       
   &lt;/article&gt;&lt;/div&gt;
       
-            &lt;div data-quickedit-field-id="node/282/field_plain_type/en/rss"&gt;Spotlight&lt;/div&gt;
+      &lt;div data-quickedit-field-id="node/280/field_tags/en/rss"&gt;
+              &lt;div&gt;Canvas Login&lt;/div&gt;
+          &lt;/div&gt;
+  
+            &lt;div data-quickedit-field-id="node/280/field_plain_type/en/rss"&gt;Spotlight&lt;/div&gt;
       </description>
-  <pubDate>Thu, 02 Aug 2018 08:07:29 +0000</pubDate>
+  <pubDate>Sun, 16 Sep 2018 08:07:27 +0000</pubDate>
     <dc:creator>ctiadmin</dc:creator>
-    <guid isPermaLink="false">282 at https://psw-ctiteach.pantheonsite.io</guid>
+    <guid isPermaLink="false">280 at https://canvas-ctiteach.pantheonsite.io</guid>
     </item>
+
   </channel>
 </rss>

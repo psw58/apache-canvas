@@ -7,6 +7,12 @@
 .flex {
   display: flex; }
 
+#notification {
+  font-size: 17px; }
+
+.black-text {
+  color: #000 !important; }
+
 #notification > div {
   margin-bottom: 10px; }
 
