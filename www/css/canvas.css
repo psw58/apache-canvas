@@ -1,6 +1,10 @@
 #main-article > section > div.primary > h2 > em {
   color: #b31b1b; }
 
+#main-article > section > div.primary > p a.dark-color:visited,
+#main-article > section > div.primary > p a.dark-color {
+  color: #c40303; }
+
 #site-header > div > div.container-fluid > div {
   margin-bottom: 20px; }
 
