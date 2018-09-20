@@ -32,7 +32,7 @@ var NotificationView = function (data) {
         var myHTML = ''
         if ('message' in data) {
             myHTML = '<div class="panel accent-' + options[selected_option] + ' fill"> \
-            <p><i class="fas fa-exclamation-triangle exclamation-triangle"></i>'+ data.message + '</p> \
+            <p><span aria-hidden="true" class="fas fa-exclamation-triangle exclamation-triangle"></span>'+ data.message + '</p> \
         </div> ';
         } else {
             console.warn('error in notification data');

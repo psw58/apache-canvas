@@ -66,7 +66,7 @@ a.link-button:active, a.link-button:hover, a.link-button:focus {
   .mobile-hidden {
     display: none; } }
 
-#notification i {
+#notification span {
   padding-right: 5px;
   font-size: 1.2em; }
 
